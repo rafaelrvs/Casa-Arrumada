@@ -36,7 +36,7 @@ class HoraExtraRegistradaParaPagamento{
 
 } 
 const HoraExtra =()=>{
-  let [resposta, setResposta]= useState('')
+  let   [resposta, setResposta]= useState('')
   const [porcentage, setPorcentage] = useState('')
   const [salarioHoraFuncionario, setsalarioHoraFuncionario] = useState('')
   const [horaExtra, sethoraExtra] = useState('')
@@ -78,8 +78,15 @@ const HoraExtra =()=>{
     event.preventDefault()
   }
   
-  const backPage = (event)=>{
-    window.location.reload()
+  const clearPage = (event)=>{
+   
+setResposta('')
+setPorcentage('')
+setsalarioHoraFuncionario('')
+sethoraExtra('')
+
+
+
     event.preventDefault()
     
   }
@@ -97,7 +104,8 @@ const HoraExtra =()=>{
       <form onSubmit={handleSubmit} action="">
         <label htmlFor="percentageInput">Porcentagem:</label>
         <input
-        type="text"
+        type="Number"
+        step='any'
         minLength={1}
         id="percentageInput"
         placeholder=' Digite a porcentagem, não use o %'
@@ -109,18 +117,20 @@ const HoraExtra =()=>{
         <label htmlFor="salarioHora">Salario P/ Hora:</label>
         <input
 
-        type="text"
+        type="Number"
         id="salarioHora"
+        step='any'
         placeholder=' Digite o valor da hora normal'
         value={salarioHoraFuncionario}
         onChange={handleInputChangeSalario}
         required
         />
         <label htmlFor="horasTotal">Hora Extra total :</label>
-      <input type="text"
+      <input type="Number"
       id='horasTotal'
       placeholder=' Digite o valor total de horas trabalhadas'
       value={horaExtra}
+      step='any'
       onChange={handleInputChangeHoraExtra}
        required
 
@@ -128,7 +138,7 @@ const HoraExtra =()=>{
 
       <div className='container-form-btn'>
       <input id='btn' type="submit" value="Calcular"  />
-      <p onClick={backPage} >voltar</p>
+      <p onClick={clearPage} >Limpar</p>
       </div>
       </form>
      </section>

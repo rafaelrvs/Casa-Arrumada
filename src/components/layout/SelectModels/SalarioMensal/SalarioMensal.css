@@ -1,0 +1,42 @@
+.containerSalarioMensal{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.containerSalarioMensal h1{
+  font-size: 20pt;
+}
+.containerSalarioMensal form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: flex-start;
+}
+
+.containerSalarioMensal input{
+  width: 350px;
+  height: 30px;
+  border: none;
+  border-radius: 25px;
+}
+.containerSalarioMensal .containerSubmit{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.containerSalarioMensal #btn{
+  width: 150px;
+  height: 50px;
+  background-color: var(--corbtn-background);
+  color: var(--background);
+}
+.containerSalarioMensal #btn:hover{
+  background-color : rgb(145, 241, 0);
+
+}
