@@ -1,0 +1,23 @@
+.App {
+  display: grid;
+  grid-template-columns: 1fr 100%;
+  height: 100vh;
+}
+.menuAbove__container{
+  display: flex;
+  height: 90px;
+  width: 100%;
+  background-color:var(--corbtn-background);
+  box-shadow: 0 0 15px black;
+}
+.side__box__container{
+  display: flex;
+  height: 100vh;
+  width: 250px;
+  justify-content: center;
+  align-items: center;
+  grid-area: 1/1;
+  box-shadow: 0 0 15px black;
+  background: var(--background);
+
+}
