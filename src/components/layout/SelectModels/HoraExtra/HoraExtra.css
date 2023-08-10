@@ -1,0 +1,48 @@
+.horaExtraSelecionada{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: start;
+  z-index: 2;
+}
+.horaExtraSelecionada h1{
+  margin-bottom: 25px;
+}
+.horaExtraSelecionada form{
+
+  display: flex;
+  justify-content: center;
+  text-align: start;
+  
+  flex-direction: column  ;
+  gap: 20px;
+}
+.horaExtraSelecionada input{
+  width: 350px;
+  height: 30px;
+  border-radius: 25px;
+  border: none;
+
+}
+.horaExtraSelecionada label{
+  color: #fff;
+}
+.horaExtraSelecionada #btn{
+  width: 150px;
+  height: 50px;
+  background-color:var(--corbtn-background) ;
+  color:var(--background);
+  font-size: 10pt;
+}
+
+.horaExtraSelecionada .container-form-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin-top: 14px;
+}
+.horaExtraSelecionada #btn:hover{
+ background-color: rgb(145, 241, 0);
+}
