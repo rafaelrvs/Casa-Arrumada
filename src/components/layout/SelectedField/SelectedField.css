@@ -9,3 +9,19 @@
   border-radius: 25px;
   z-index: 1;
 }
+.campo__Selecionado header{
+  height: 20px;
+  text-align: center;
+  font-size: 10pt;
+  text-align: center;
+  font-weight: 500;
+  margin: 50px;
+  border-radius: 50%;
+  width: 20px;
+  border: 2px solid rgb(251, 218, 1);
+ color: rgb(251, 218, 1); 
+}
+.campo__Selecionado header:hover{
+ color: red;
+ border: 2px solid red;
+}

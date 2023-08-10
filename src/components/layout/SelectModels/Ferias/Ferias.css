@@ -1,0 +1,40 @@
+.vacation{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%); 
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.vacation h1{
+  font-size: 20pt;
+}
+.vacation form{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.vacation input{
+  height: 30px;
+  width: 350px;
+  border-radius: 25px;
+  border: none;
+}
+.vacation #btn{
+  border-radius: 25px;
+  background-color:var(--corbtn-background);
+  color:var(--background);
+  width: 150px;
+  height: 50px;
+}
+.vacation .container-btn{
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+.vacation #btn:hover{
+  background-color: rgb(145, 241, 0) ;
+}

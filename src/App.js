@@ -8,9 +8,13 @@ function App() {
     <div className="App">
         <div className="menuAbove__container">
           <MenuAbove/>
+          
         </div>
+        
         <div className="side__box__container">
           <SideBox/>
+          
+
         </div>
 
      
