@@ -1,7 +1,7 @@
 .decimoTerceiroContainer{
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 60%;
   transform: translate(-50%,-50%);
   justify-content: center;
   align-items: center;
@@ -33,6 +33,7 @@
   background-color: var(--corbtn-background);
   color: var(--background);
 }
-.decimoTerceiroContainer #btn{
-  background-color: greenyellow;
-}
+.decimoTerceiroContainer #btn:hover{
+    background-color : rgb(145, 241, 0);
+  
+  }

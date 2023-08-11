@@ -37,8 +37,7 @@ const  inserirdiaDeTrabalho = (event) =>{
 
 function insertValueInSalario(event){
   const newSalarioregister = new WageMonth(salario,hora ,diaDeTrabalho)
-  setValueWage(newSalarioregister.wageMain)
-  console.log(newSalarioregister.wageMain)
+  setValueWage(`Pague: R$${newSalarioregister.wageMain}`)
   event.preventDefault()
 }
 

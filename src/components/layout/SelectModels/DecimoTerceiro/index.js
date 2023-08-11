@@ -4,7 +4,7 @@ class DecimoTErceiroRegistrado{
   constructor(salarioBrutoInserido, mesesInserido){
     this._meses = mesesInserido
     this._salario = salarioBrutoInserido /12
-  this._valueTotal = this._salario * this._meses
+    this._valueTotal = this._salario * this._meses
   
   }
   get valueTotal(){
