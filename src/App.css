@@ -1,10 +1,16 @@
 .App {
   display: grid;
-  grid-template-columns: 1fr 100%;
+  grid-template-columns: repeat(6, 2fr) ;
+  width: 100%;
   height: 100vh;
 }
 .menuAbove__container{
-  display: flex;
+  position:fixed;
+  display: grid;
+  grid-template-columns: repeat(7, 2fr);
+  justify-content: space-between;
+  align-items: center;
+  grid-area: 1/2;
   height: 90px;
   width: 100%;
   background-color:var(--corbtn-background);
@@ -15,8 +21,9 @@
   z-index: 1;
 }
 .side__box__container{
+  position: fixed;
   display: flex;
-  height: 100vh;
+  height: 100%;
   width: 250px;
   justify-content: center;
   align-items: center;
@@ -25,3 +32,16 @@
   background: var(--background);
 
 }
+
+@media(max-width:860px){
+  
+    .side__box__container{
+      width: 200px;
+      transition: 0.5s;
+    }
+    .side__box__container p{
+      
+    }
+  }
+ 
+
