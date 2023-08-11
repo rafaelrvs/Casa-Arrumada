@@ -5,7 +5,7 @@ const MenuAbove =()=>{
       <p>Descanso</p>
       <p>Estoque</p>
       <p>Agenda</p>
-      <p>Descanso</p>
+      <p>Avisos</p>
       <p>Anotação</p>
     </div>
   )
