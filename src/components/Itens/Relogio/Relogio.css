@@ -1,0 +1,45 @@
+
+h1{
+
+  display: flex;
+  height: 2em;
+  color: #fff;
+  box-shadow: 10px 5px 10px rgb(93, 10, 218);
+  
+}
+button:hover{
+  cursor: pointer;
+  background-image: linear-gradient(45deg, aqua,#fff);
+  
+}
+.button-btn-start{
+  text-align: center;
+  height: 2em;
+  width: 4em;
+  color:#fff;
+  background: linear-gradient(45deg, green,gray);
+  border: none;
+  border-radius: 2px;
+  margin: 2px;
+}
+.button-btn-stop{
+  text-align: center;
+  height: 2em;
+  width: 4em;
+  color:#fff;
+  border: none;
+  border-radius: 2px;
+  background: linear-gradient(45deg, red,gray);
+  margin: 2px;
+}
+.button-btn-reset{
+
+  text-align: center;
+  height: 2em;
+  width: 4em;
+  color:#fff;
+  border: none;
+  border-radius: 2px;
+  background: linear-gradient(45deg, blue,gray);
+  margin: 2px;
+}
