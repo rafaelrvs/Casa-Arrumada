@@ -1,11 +1,11 @@
 .container-menuAbove{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 1300px;
 }
-.container-menuAbove .container-img{
-  justify-content: flex-end;
-  height: 50px;
-  width: 50px;
-  margin: 10px;
-}
-#img{
-  height: 150px;
+.container-menuAbove p:hover{
+  scale: 1.2;
+  transition: 0.5s;
+  cursor: pointer;
 }
