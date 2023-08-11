@@ -56,7 +56,7 @@ const SideBox = () =>{
   
   return(
     <div className="container-box">
-      <div>
+      <div className='container-img'>
       <img id='img' src="../img/casaArrumada.png" alt="logo" />
 
       </div>
