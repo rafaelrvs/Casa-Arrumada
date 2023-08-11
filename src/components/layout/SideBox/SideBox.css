@@ -23,3 +23,9 @@ z-index: 1;
   scale: 1.2;
   transition: 0.3s;
 }
+
+@media(max-width:860px){
+  .container-box p{
+    font-size: 9pt;
+  }
+}

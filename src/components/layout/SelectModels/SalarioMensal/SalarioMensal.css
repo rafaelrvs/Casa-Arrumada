@@ -1,6 +1,6 @@
 .containerSalarioMensal{
-  position: absolute;
-  top: 50%;
+  position: fixed;
+  top: 60%;
   left: 60%;
   transform: translate(-50%,-50%);
   display: flex;
@@ -39,4 +39,20 @@
 .containerSalarioMensal #btn:hover{
   background-color : rgb(145, 241, 0);
 
+}
+@media(max-width:1000px){
+.containerSalarioMensal form{
+  width: 300px;
+  height: 350px;
+  margin-bottom: 50px;
+  transition: 0.5s;
+ 
+
+  }
+  .containerSalarioMensal input{
+    padding: 5px;
+  }
+  .containerSalarioMensal h1{
+    
+  }
 }

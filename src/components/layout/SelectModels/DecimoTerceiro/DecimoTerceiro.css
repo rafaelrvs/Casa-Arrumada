@@ -1,6 +1,6 @@
 .decimoTerceiroContainer{
-  position: absolute;
-  top: 50%;
+  position: fixed;
+  top: 60%;
   left: 60%;
   transform: translate(-50%,-50%);
   justify-content: center;
@@ -36,4 +36,15 @@
 .decimoTerceiroContainer #btn:hover{
     background-color : rgb(145, 241, 0);
   
+  }
+  @media(max-width:860px){
+    .decimoTerceiroContainer form{
+      justify-content: center;
+      margin-left: 100px;
+      margin-top: 50px;
+    }
+    .decimoTerceiroContainer input{
+      width: 250px;
+      transition: 0.5s;
+    }
   }

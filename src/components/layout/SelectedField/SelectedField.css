@@ -1,13 +1,14 @@
 .campo__Selecionado{
-  position: absolute;
-  top: 50%;
+  position: fixed;
+  top: 60%;
   left: 60%;
   transform: translate(-50%,-50%);
-  height: 500px;
-  width: 700px;
+  height: 80%;
+  width: 60%;
   background: rgb(50, 45, 45);
   border-radius: 25px;
   z-index: 1;
+  margin-left: 2% ;
 }
 .campo__Selecionado header{
   height: 20px;
@@ -24,4 +25,16 @@
 .campo__Selecionado header:hover{
  color: red;
  border: 2px solid red;
+}
+@media(max-width:860px){
+ .campo__Selecionado{
+  height: 450px;
+  width: 350px;
+  margin-left: 50px;
+  transition: 0.5s;
+  }
+  .campo__Selecionado header {
+   margin: 25px;
+   transition: 0.5s;
+  }
 }

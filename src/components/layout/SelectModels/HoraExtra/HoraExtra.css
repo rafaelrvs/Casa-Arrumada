@@ -1,6 +1,6 @@
 .horaExtraSelecionada{
-  position: absolute;
-  top: 50%;
+  position: fixed;
+  top: 60%;
   left: 60%;
   transform: translate(-50%,-50%);
   text-align: start;
@@ -14,7 +14,7 @@
   display: flex;
   justify-content: center;
   text-align: start;
-  
+  width: 100%;
   flex-direction: column  ;
   gap: 20px;
 }
@@ -45,4 +45,10 @@
 }
 .horaExtraSelecionada #btn:hover{
  background-color: rgb(145, 241, 0);
+}
+
+@media(max-width:1000px){
+  .horaExtraSelecionada form{
+
+  }
 }

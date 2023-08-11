@@ -1,11 +1,74 @@
 .container-menuAbove{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 1300px;
+display: flex;
+justify-content: center;
+align-items: center;
+grid-area: 1/8;
+grid-column: 2/10;
+
 }
 .container-menuAbove p:hover{
   scale: 1.2;
   transition: 0.5s;
   cursor: pointer;
+}
+.container-menuAbove section{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+}
+
+@media (max-width:1000px) {
+ .container-menuAbove{
+   transition: 0.10s;
+  grid-column: 3/10;
+ } 
+ .container-menuAbove section{
+  width: 80%;
+ }
+ .container-menuAbove p{
+  font-size: 10pt;
+  transition: 0.5s;
+ }
+}
+@media(max-width:750px){
+  .container-menuAbove{
+    grid-column: 3/10;
+  }
+  .container-menuAbove section{
+    width: 80%;
+    margin-left: 15%;
+  }
+}
+@media(max-width:650px) {
+  .container-menuAbove p{
+    font-size: 9pt;
+  }
+  .container-menuAbove section{
+    width: 60%;
+    gap: 20px;
+    margin-right: 10px;
+  
+  }
+}
+@media(max-width:580px){
+  .container-menuAbove p{
+    font-size: 8pt;
+  }
+  .container-menuAbove section{
+    width: 50%;
+    gap: 10px;  
+  }
+}
+@media(max-width:500px){
+  .container-menuAbove p{
+    font-size: 6pt;
+  }
+  .container-menuAbove section{
+    width: 30%;
+    gap: 
+    5px; 
+     
+  }
+
 }
