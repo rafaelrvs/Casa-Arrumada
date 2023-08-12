@@ -53,6 +53,28 @@
     padding: 5px;
   }
   .containerSalarioMensal h1{
-    
+
+  }
+}
+@media(max-width:860px){
+  .containerSalarioMensal form {
+    justify-content: center;
+      margin-left: 130px;
+      margin-top: 50px;
+      margin-bottom: 100px;
+      transition: 0.5s;
+    }
+    .containerSalarioMensal input{
+      width: 250px;
+      transition: 0.5s;
+    }
+    .containerSalarioMensal h1{
+      margin-left: 100px;
+      margin-top: 50px;
+      margin-bottom: -25px;
+      transition: 0.5s;
+  }
+  .containerSalarioMensal .containerSubmit{
+   margin-right: 50px;
   }
 }

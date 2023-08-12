@@ -38,3 +38,14 @@
 .vacation #btn:hover{
   background-color: rgb(145, 241, 0) ;
 }
+@media(max-width:860px){
+  .vacation form {
+    justify-content: center;
+      margin-left: 100px;
+      margin-top: 50px;
+  }
+  .vacation input{
+    width: 250px;
+    transition: 0.5s;
+  }
+}
