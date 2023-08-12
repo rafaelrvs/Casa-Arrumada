@@ -7,7 +7,7 @@ const Estoque = () =>{
         <form action="">
           <input type="text" placeholder='Nome do produto' />
           <textarea name="description" id="description" cols="30" rows="10"></textarea>
-          <div>
+          <div className='content-btn'>
 
           <input type="submit" value="Adicionar" />
             <p>Remover</p>

@@ -10,3 +10,7 @@
   flex-direction: column;
   gap: 10px;
 }
+.content-btn{
+  display: flex;
+  justify-content: space-between;
+}
