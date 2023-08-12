@@ -9,7 +9,7 @@ const Estoque = () =>{
           <textarea name="description" id="description" cols="30" rows="10"></textarea>
           <div className='content-btn'>
 
-          <input type="submit" value="Adicionar" />
+          <input type="submit" value="Adicionar"  id='btn'/>
             <p>Remover</p>
           </div>
        

@@ -1,6 +1,6 @@
 .estoque-container{
   position: fixed;
-  top: 50%;
+  top: 60%;
   left: 60%;
   transform: translate(-50%, -50%);
   z-index: 2;
@@ -10,7 +10,21 @@
   flex-direction: column;
   gap: 10px;
 }
+.estoque-container input{
+  border-radius: 5px;
+  padding: 5px;
+}
 .content-btn{
   display: flex;
   justify-content: space-between;
+}
+.content-btn p{
+  color:rgb(251, 218, 1);
+}
+.content-btn #btn{
+  background-color: rgba(251, 218, 1);
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  color: var(--background);
 }
