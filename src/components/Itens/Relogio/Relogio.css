@@ -45,7 +45,7 @@
 }
 .cronometro button:hover{
   cursor: pointer;
-  background-image: linear-gradient(45deg, aqua,#fff);
+  background: var(--corbtn-background);
   color: black;
   
 }
