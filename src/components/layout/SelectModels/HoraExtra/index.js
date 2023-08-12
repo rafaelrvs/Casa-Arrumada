@@ -138,7 +138,7 @@ sethoraExtra('')
 
       <div className='container-form-btn'>
       <input id='btn' type="submit" value="Calcular"  />
-      <p onClick={clearPage} >Limpar</p>
+      <p onClick={clearPage}>Limpar</p>
       </div>
       </form>
      </section>

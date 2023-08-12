@@ -40,15 +40,34 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 50px;
   margin-top: 14px;
 }
 .horaExtraSelecionada #btn:hover{
  background-color: rgb(145, 241, 0);
 }
 
-@media(max-width:1000px){
-  .horaExtraSelecionada form{
+@media(max-width:860px){
+  .horaExtraSelecionada form {
 
+    justify-content: center;
+      margin-left: 100px;
+      margin-top: 50px;
+      gap: 10px;
+      margin-bottom: 10px;
+  }
+  .horaExtraSelecionada input{
+    width: 250px;
+    transition: 0.5s;
+  }
+  .horaExtraSelecionada h1{
+    margin-left: 100px;
+    margin-top: 12px;
+    transition: 0.5s;
+    margin-bottom: -25px;
+  }
+  .horaExtraSelecionada .container-form-btn{
+    
+    
+     
   }
 }
