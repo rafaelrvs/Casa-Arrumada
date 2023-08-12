@@ -24,7 +24,7 @@
 }
 .campo__Selecionado header:hover{
  color: red;
- border: 2px solid red;
+ border: 2px solid rgb(38, 30, 30);
 }
 @media(max-width:860px){
  .campo__Selecionado{
