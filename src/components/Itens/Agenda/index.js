@@ -1,53 +1,70 @@
-import React, { useState } from 'react';
-
+import React from 'react';
 import './Agenda.css';
-class listMonth31{
-  constructor(){
-    this._meses = [
-      'janeiro',
-      'março',
-      'maio',
-      'julho',
-      'agosto',
-      'outubro',
-      'dezembro',
-    ]
-
-    
-  }
-  get meses(){
-    return this._meses;
-  }
-  
-}
 
 
-let month = ""
-function handlermonthSelct(event){
-  const statusMonthNow = event.target.value
-  month = statusMonthNow
-  console.log(month)
-    
-event.preventDefault()
-  
-}
 
 class Agenda extends React.Component {
-   state = {
-     
-     daysInMonth: 31, // Altere para o número de dias no mês atual
-    };
+  
+  state = {
+    
+    daysInMonth:0// Altere para o número de dias no mês atual
+
+  };
+
+   handlermonthSelct = (event)=>{
+    const listMonthWith31Days = [
+      'Janeiro',
+      'Março',
+      'Maio',
+      'Julho',
+      'Agosto',
+      'Outubro',
+      'Dezembro'
+    ]
+    const currentMonth = event.target.value 
+
+    const monthInList = listMonthWith31Days.includes(currentMonth)
+      this.sendValueMonth(monthInList, currentMonth)
+  
 
     
-  
+    event.preventDefault()
+  }
+
+
+   sendValueMonth = (value, month)=>{
+     let newDaysInMonth; // Novo valor
+     if(value === true){
+       
+        newDaysInMonth = 31; // Novo valor
+       // Aqui você pode adicionar a lógica para calcular o novo valor
+    this.setState({ daysInMonth: newDaysInMonth });
+    
+    
+  }
+  else if(month === 'Fevereiro'){
+    newDaysInMonth = 28; // Novo valor
+   this.setState({ daysInMonth: newDaysInMonth });
+  }
+    
+    else{
+      newDaysInMonth = 30; // Novo valor
+     this.setState({ daysInMonth: newDaysInMonth });
+
+
+   }
+ 
+    
+    
+  }
+
+
   
   renderCalendar = () => {
-    
-    
-    
     const { daysInMonth } = this.state;
     const calendar = [];
     
+
     let dayCounter = 1;
     for (let week = 0; week < 5; week++) { // 5 semanas para simplificar o exemplo
       const row = [];
@@ -64,18 +81,17 @@ class Agenda extends React.Component {
     
     return calendar;
   };
-
-  
   
   render() {
-   
     
+   
     return (
+      
       <div className='container__Agenda'>
         <div className='container__btn_option'>
 
         <h2>Calendário</h2>
-        <select name="" id="selectMonth" onChangeCapture={handlermonthSelct}>
+        <select name="" id="selectMonth" onChange={this.handlermonthSelct}>
           <option value="">Selecione o mês</option>
           <option value="Janeiro">  Janeiro  </option>
           <option value="Fevereiro">Fevereiro  </option>
