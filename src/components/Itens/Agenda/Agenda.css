@@ -39,7 +39,15 @@
 .calendar td:hover {
   background-color: #f0f0f0;
 }
-
+.container__btn_option{
+  display: flex;
+justify-content: space-between;
+}
+.container__btn_option #selectMonth{
+  height: 50px;
+  width: 150px;
+  text-align: center;
+}
 @media(max-width:860px) {
   .container__Agenda{
     top: 	70%;
