@@ -58,18 +58,18 @@ class Agenda extends React.Component {
 
         <h2>Calendário</h2>
         <select name="" id="selectMonth">
-          <option value="'janeiro">Janeiro  </option>
-          <option value="'fevereiro">Fevereiro  </option>
-          <option value="'março">Março  </option>
-          <option value="'maio">Abril  </option>
-          <option value="'julho">Maio  </option>
-          <option value="'agosto">Junho  </option>
-          <option value="'outubro">Julho  </option>
-          <option value="'dezembro">Agosto  </option>
-          <option value="'dezembro">Setembro  </option>
-          <option value="'dezembro">Outubro  </option>
-          <option value="'dezembro">Novembro  </option>
-          <option value="'dezembro">Dezembro  </option>
+          <option value="Janeiro">  Janeiro  </option>
+          <option value="Fevereiro">Fevereiro  </option>
+          <option value="Março">    Março  </option>
+          <option value="Abril">     Abril  </option>
+          <option value="Maio">    Maio  </option>
+          <option value="Junho">   Junho  </option>
+          <option value="Julho">  Julho  </option>
+          <option value="Agosto"> Agosto  </option>
+          <option value="Setembro"> Setembro  </option>
+          <option value="Outubro"> Outubro  </option>
+          <option value="Novembro"> Novembro  </option>
+          <option value="Dezembro"> Dezembro  </option>
         </select>
 
         </div>
