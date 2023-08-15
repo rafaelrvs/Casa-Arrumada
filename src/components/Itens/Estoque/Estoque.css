@@ -31,3 +31,10 @@
 .estoque-container h1{
   color: var(--corbtn-background);
 }
+
+@media(max-width:860px){
+  .estoque-container{
+   margin-left: 50px;
+}
+
+}
