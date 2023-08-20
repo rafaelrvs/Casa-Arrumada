@@ -17,17 +17,19 @@ const MenuAbove =()=>{
   setActiveFieldBackground(false)
   setactiveFieldAgenda(false)
   event.preventDefault()
+
 }
 function activeStock(event){
   setActiveStockPresentation(true)
-  setActiveWacthPresentation(false)
   setActiveFieldBackground(true)
+  setActiveWacthPresentation(false)
   setactiveFieldAgenda(false)
   event.preventDefault()
 }
 function activeCalendar (event){
   setActiveFieldBackground(true)
   setactiveFieldAgenda(true)
+  setActiveStockPresentation(false)
   event.preventDefault()
 }
 
