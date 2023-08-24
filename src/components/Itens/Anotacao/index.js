@@ -1,10 +1,10 @@
-import "/.Anotacao.css"
+import './Anotacao.css'
+function Anotacao() {
+return(
+  <div>
 
-const Anotacao = ()=>{
-  return(
-    <div>
-      
-    </div>
-  )
+  </div>
+  );
 }
-export default Anotacao
+
+export default Anotacao;

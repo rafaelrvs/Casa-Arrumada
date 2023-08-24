@@ -4,11 +4,13 @@ import Relogio from '../../Itens/Relogio'
 import Estoque from '../../Itens/Estoque'
 import SelectField from '../SelectedField'
 import Agenda from '../../Itens/Agenda'
+import Anotacao from '../../Itens/Anotacao'
 const MenuAbove =()=>{
   const [activeWacthPresentation,setActiveWacthPresentation] = useState(false)
   const [activeStockPresentation,setActiveStockPresentation] = useState(false)
   const [activeFieldBackground,setActiveFieldBackground] = useState(false)
   const [activeFieldAgenda,setactiveFieldAgenda] = useState(false)
+  const [activeAnotacaoPresentation, setActiveFieldAnotacao] = useState(false)
   
   
   function activeWacth(event){
@@ -32,6 +34,13 @@ function activeCalendar (event){
   setActiveStockPresentation(false)
   event.preventDefault()
 }
+function activeAnotacao (event){
+  setActiveFieldBackground(true)
+  setActiveFieldAnotacao(true)
+  setactiveFieldAgenda(false)
+  setActiveStockPresentation(false)
+  event.preventDefault()
+}
 
 
 
@@ -43,11 +52,12 @@ function activeCalendar (event){
       <p onClick={activeStock}>Estoque</p>
       <p onClick={activeCalendar}>Agenda</p>
       <p>Avisos</p>
-      <p>Anotação</p>
+      <p onClick={activeAnotacao}>Anotação</p>
       {activeWacthPresentation&&<Relogio/>}
       {activeStockPresentation&&<Estoque/>}
       {activeFieldBackground&&<SelectField/>}
       {activeFieldAgenda&&<Agenda/>}
+      {activeAnotacaoPresentation&&<Anotacao/>}
       </section>
     </div>
   )
