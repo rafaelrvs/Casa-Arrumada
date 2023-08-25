@@ -9,12 +9,13 @@
   z-index: 1;
 }
 .containerSalarioMensal h1{
+  margin-top: 35px;
   font-size: 20pt;
 }
 .containerSalarioMensal form {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
   justify-content: flex-start;
 }
 

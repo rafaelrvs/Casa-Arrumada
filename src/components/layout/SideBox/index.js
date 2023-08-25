@@ -62,17 +62,17 @@ const SideBox = () =>{
       </div>
      
       <div className="hora__extra">
-        <p onMouseEnter={calculoHoraExtra}>Calcular Hora Extra</p>
+        <p onClick={calculoHoraExtra} onMouseEnter={calculoHoraExtra}>Calcular Hora Extra</p>
       </div>
       <div className="salario__mensal">
-        <p onMouseEnter={showWege}>Calculo de salario mensal</p>
+        <p onClick={showWege}  onMouseEnter={showWege}>Calculo de salario mensal</p>
       </div>
       <div className="ferias">
-        <p onMouseEnter={showVacation}>Calculo de ferias</p>
+        <p onClick={showVacation}  onMouseEnter={showVacation}>Calculo de ferias</p>
       </div>
   
       <div className='descimoTerceiro'>
-        <p onMouseEnter={shoWdecimoTerceiroPresentation}>Calculo do descimo terceiro</p>
+        <p onClick={shoWdecimoTerceiroPresentation} onMouseEnter={shoWdecimoTerceiroPresentation}>Calculo do descimo terceiro</p>
       </div>
       {selectFieldPage && <SelectField/> }
       { selectFieldPageHoraExtra && <HoraExtra/> }
