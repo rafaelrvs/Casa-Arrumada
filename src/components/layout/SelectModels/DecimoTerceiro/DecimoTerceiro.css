@@ -37,6 +37,7 @@
     background-color : rgb(145, 241, 0);
   
   }
+
   @media(max-width:860px){
     .decimoTerceiroContainer form{
       justify-content: center;
@@ -46,5 +47,34 @@
     .decimoTerceiroContainer input{
       width: 250px;
       transition: 0.5s;
+    }
+  }
+  @media(max-width:600px){
+    .decimoTerceiroContainer form{
+      justify-content: center;
+      width: 200px;
+      margin-left: 100px;
+      margin-top: 1px;
+      gap: 15px;
+    }
+    .decimoTerceiroContainer input{
+      width: 200px;
+      transition: 0.5s;
+    }
+    .decimoTerceiroContainer h1 {
+      font-size: 15pt;
+      margin-left: 35px;
+      margin-top: 25px;
+    }
+    .decimoTerceiroContainer label{
+      font-size: 7pt;
+    }
+    .decimoTerceiroContainer .container-btn{
+      width: 170px;
+      gap: 15px;
+      margin-bottom: 35px;
+    }
+    .decimoTerceiroContainer #btn{
+      width: 100px;
     }
   }

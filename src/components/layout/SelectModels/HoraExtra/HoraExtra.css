@@ -71,3 +71,34 @@
      
   }
 }
+
+@media(max-width:600px){
+  .horaExtraSelecionada form {
+
+    justify-content: center;
+      margin-left: 150px;
+      margin-top: 50px;
+      gap: 10px;
+      margin-bottom: 10px;
+  }
+  .horaExtraSelecionada input{
+    width: 190px;
+    transition: 0.5s;
+  }
+  .horaExtraSelecionada h1{
+    margin-left: 190px;
+    font-size: 15pt;
+    margin-top: 10px;
+    transition: 0.5s;
+
+  }
+  .horaExtraSelecionada .container-form-btn{
+
+    width: 180px;
+    margin-right: 55px;
+     
+  }
+  .horaExtraSelecionada #btn{
+    width: 100px;
+  }
+}

@@ -38,3 +38,16 @@
    transition: 0.5s;
   }
 }
+@media(max-width:600px){
+ .campo__Selecionado{
+  height: 350px;
+  width: 250px;
+  margin-left: 50px;
+  transition: 0.5s;
+  margin-right: 25px;
+  }
+  .campo__Selecionado header {
+   margin: 25px;
+   transition: 0.5s;
+  }
+}

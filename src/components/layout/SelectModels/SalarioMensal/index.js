@@ -53,7 +53,7 @@ return(
   <div className="containerSalarioMensal">
     <section>
       <form onSubmit={insertValueInSalario} action="">
-      <h1>Salario mensal: {valueWage}</h1>
+      <h1>Salario mensal: {valueWage}</h1> <br />
 
         <label htmlFor="salarioPhora">Salario P/hora</label>
         <input id='salarioPhora' 

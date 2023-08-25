@@ -29,3 +29,17 @@ z-index: 1;
     font-size: 9pt;
   }
 }
+@media(max-width:600px){
+  .container-box p{
+    font-size: 7pt; 
+    transition: 0.3s;
+  }
+  #img:hover{
+    scale: 1.1;
+    transition: 0.3s;
+    
+  }
+  #img{
+    height: 100px;
+  }
+}
