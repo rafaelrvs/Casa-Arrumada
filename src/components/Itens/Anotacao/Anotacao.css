@@ -1,0 +1,33 @@
+.blocoDeNotas {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  top: 40%;
+  left: 60%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  margin-top: 2rem;
+color: var(--corbtn-background);
+  z-index: 2;
+}
+
+.note-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  margin-bottom: 1rem;
+}
+
+.notes-list {
+  text-align: left;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
