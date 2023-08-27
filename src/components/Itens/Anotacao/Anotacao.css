@@ -8,7 +8,7 @@
   transform: translate(-50%,-50%);
   text-align: center;
   margin-top: 2rem;
-color: var(--corbtn-background);
+  color: var(--corbtn-background);
   z-index: 2;
 }
 
@@ -30,4 +30,12 @@ ul {
 
 li {
   margin-bottom: 0.5rem;
+}
+.blocoDeNotas button {
+  color: var(--background);
+  padding: 5px;
+  border-radius: 25px;
+  background-color: var(--corbtn-background);
+  border: none;
+  cursor: pointer;
 }

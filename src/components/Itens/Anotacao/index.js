@@ -5,7 +5,13 @@ import React, { useState } from 'react';
 function Anotacao() {
   const [notes, setNotes] = useState([]);
   const [inputValue, setInputValue] = useState('');
-
+   
+  const handleRemoveNote = () =>{
+    notes.forEach((element) =>{
+      const updatedNotes = notes.filter(note => note !== inputValue);
+      setNotes(updatedNotes);
+    })
+  }
   const handleAddNote = () => {
     if (inputValue.trim() !== '') {
       setNotes([...notes, inputValue]);
@@ -25,6 +31,7 @@ function Anotacao() {
           onChange={(e) => setInputValue(e.target.value)}
         />
         <button onClick={handleAddNote}>Adicionar Nota</button>
+        <button onClick={handleRemoveNote}>Limpar</button>
       </div>
       <div className="notes-list">
         <h2>Notas:</h2>
