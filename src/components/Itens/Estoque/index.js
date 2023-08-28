@@ -44,7 +44,7 @@ const Estoque = () =>{
           <div className='content-btn'>
 
           <input type="submit" value="Adicionar"  id='btn'/>
-            <p  >Consultar</p>
+            <p>Consultar</p>
             <p>Remover</p>
           </div>
        

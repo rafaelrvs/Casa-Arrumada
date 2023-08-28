@@ -9,7 +9,7 @@ let digito = 0;
 
 const Relogio = () => {
   const [valueHours, setValueHours] = useState("00:00:00");
-
+  
   function doisdigitos(digito) {
     if (digito < 10) {
       return "0" + digito;

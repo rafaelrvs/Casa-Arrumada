@@ -17,6 +17,7 @@ const MenuAbove =()=>{
   setActiveWacthPresentation(true)
   setActiveStockPresentation(false)
   setActiveFieldBackground(false)
+  setActiveFieldAnotacao(false)
   setactiveFieldAgenda(false)
   event.preventDefault()
 
@@ -25,12 +26,14 @@ function activeStock(event){
   setActiveStockPresentation(true)
   setActiveFieldBackground(true)
   setActiveWacthPresentation(false)
+  setActiveFieldAnotacao(false)
   setactiveFieldAgenda(false)
   event.preventDefault()
 }
 function activeCalendar (event){
   setActiveFieldBackground(true)
   setactiveFieldAgenda(true)
+  setActiveFieldAnotacao(false)
   setActiveStockPresentation(false)
   event.preventDefault()
 }
@@ -41,6 +44,7 @@ function activeAnotacao (event){
   setActiveStockPresentation(false)
   event.preventDefault()
 }
+
 
 
 

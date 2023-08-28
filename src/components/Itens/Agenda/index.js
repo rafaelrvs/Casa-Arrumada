@@ -1,5 +1,6 @@
 import React from 'react';
 import './Agenda.css';
+import { type } from '@testing-library/user-event/dist/type';
 
 
 
@@ -83,11 +84,20 @@ class Agenda extends React.Component {
   };
   
   render() {
+
+    
+ 
+    const handlerSelectItem = (event)=>{
+
+    
+  }
+
+
     
    
     return (
       
-      <div className='container__Agenda'>
+      <div onClick={handlerSelectItem} className='container__Agenda'>
         <div className='container__btn_option'>
 
         <h2>Calendário</h2>
