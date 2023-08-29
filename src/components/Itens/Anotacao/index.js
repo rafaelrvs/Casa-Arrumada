@@ -5,19 +5,33 @@ import "./Anotacao.css";
 function Anotacao() {
   const [inputValue, setInputValue] = useState("");
   const [tasks, setTasks] = useState([]);
+  const [contPassWord, setContWord] = useState(0);
 
   const handleInputChange = (event) => {
-    setInputValue(event.target.value);
+    let insertingValue = event.target.value
+    const contWord = insertingValue.length
+    setContWord(contWord)
+    setInputValue(insertingValue);
+    validate(contWord);
   };
+  function validate(contWord){
+    let colorH2 =  document.querySelector("#contagem")
+    colorH2.style.color=" rgb(251, 218, 1)"
+    if(contWord>30){
+     colorH2.style.color="red"
+     setContWord("-"+ contWord + " Resuma sua tarefa em menos palavras !")
+   }
+  }
 
   const addItem = () => {
-    if (inputValue.trim() !== "") {
+    if (inputValue.trim() !== ""&& inputValue.length <=30) {
       const newTask = {
         text: inputValue,
         isComplete: false,
       };
       setTasks([...tasks, newTask]);
       setInputValue("");
+      setContWord(0)
     }
   };
 
@@ -34,7 +48,10 @@ function Anotacao() {
 
   return (
     <div className="tarefas">
+      <div>
       <h1>Anotação</h1>
+      <h2 id="contagem">{contPassWord}</h2>
+      </div>
       <div className="tarefas-input">
         <input
           type="text"

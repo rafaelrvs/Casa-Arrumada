@@ -6,8 +6,7 @@ const backPage =(event)=>{
 const SelectField =()=>{
 return(
   <div className='campo__Selecionado'>
-    <header onClick={backPage}>X</header>
-   
+    <img  onClick={backPage} id='closePage' src="../img/xis.svg" alt="close Page" />
   </div>
 )
 }

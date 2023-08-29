@@ -10,44 +10,8 @@
   z-index: 1;
   margin-left: 2% ;
 }
-.campo__Selecionado header{
-  height: 20px;
-  text-align: center;
-  font-size: 10pt;
-  text-align: center;
-  font-weight: 500;
-  margin: 50px;
-  border-radius: 50%;
-  width: 20px;
-  border: 2px solid rgb(251, 218, 1);
- color: rgb(251, 218, 1); 
+.campo__Selecionado #closePage{
+ 
+  border:none;
 }
-.campo__Selecionado header:hover{
- color: red;
- border: 2px solid rgb(38, 30, 30);
-}
-@media(max-width:860px){
- .campo__Selecionado{
-  height: 450px;
-  width: 350px;
-  margin-left: 50px;
-  transition: 0.5s;
-  }
-  .campo__Selecionado header {
-   margin: 25px;
-   transition: 0.5s;
-  }
-}
-@media(max-width:600px){
- .campo__Selecionado{
-  height: 350px;
-  width: 250px;
-  margin-left: 50px;
-  transition: 0.5s;
-  margin-right: 25px;
-  }
-  .campo__Selecionado header {
-   margin: 25px;
-   transition: 0.5s;
-  }
-}
+
