@@ -1,43 +1,77 @@
-import './Anotacao.css'
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import "./Anotacao.css";
 
 
 function Anotacao() {
-  const [notes, setNotes] = useState([]);
-  const [inputValue, setInputValue] = useState('');
-   
-  const handleRemoveNote = () =>{
-    notes.forEach((element) =>{
-      const updatedNotes = notes.filter(note => note !== inputValue);
-      setNotes(updatedNotes);
-    })
-  }
-  const handleAddNote = () => {
-    if (inputValue.trim() !== '') {
-      setNotes([...notes, inputValue]);
-      setInputValue('');
+  const [inputValue, setInputValue] = useState("");
+  const [tasks, setTasks] = useState([]);
+
+  const handleInputChange = (event) => {
+    setInputValue(event.target.value);
+  };
+
+  const addItem = () => {
+    if (inputValue.trim() !== "") {
+      const newTask = {
+        text: inputValue,
+        isComplete: false,
+      };
+      setTasks([...tasks, newTask]);
+      setInputValue("");
     }
   };
 
+  const deleteItem = (index) => {
+    const newTasks = tasks.filter((_, i) => i !== index);
+    setTasks(newTasks);
+  };
+
+  const toggleComplete = (index) => {
+    const newTasks = [...tasks];
+    newTasks[index].isComplete = !newTasks[index].isComplete;
+    setTasks(newTasks);
+  };
+
   return (
-    <div className="blocoDeNotas">
-      <h1>Meu Bloco de Notas</h1>
-      <br />
-      <div className="note-container">
+    <div className="tarefas">
+      <h1>Anotação</h1>
+      <div className="tarefas-input">
         <input
           type="text"
-          placeholder="Digite sua nota..."
+          placeholder="Adicione a tarefa"
           value={inputValue}
-          onChange={(e) => setInputValue(e.target.value)}
+          onChange={handleInputChange}
         />
-        <button onClick={handleAddNote}>Adicionar Nota</button>
-        <button onClick={handleRemoveNote}>Limpar</button>
+        <img
+          src="../img/mais.svg"
+          alt="Add"
+          onClick={addItem}
+          className="icone"
+        />
       </div>
-      <div className="notes-list">
-        <h2>Notas:</h2>
+      <div className="tarefas-lista">
         <ul>
-          {notes.map((note, index) => (
-            <li key={index}>{note}</li>
+          {tasks.map((task, index) => (
+            <li
+              key={index}
+              className={`${task.isComplete ? "check" : ""} show`}
+            >
+              {task.text}
+              <div className="icones">
+                <img
+                  src="./img/check.svg"
+                  alt="Complete"
+                  onClick={() => toggleComplete(index)}
+                  className="icone"
+                />
+                <img
+                  src="./img/xis.svg"
+                  alt="Delete"
+                  onClick={() => deleteItem(index)}
+                  className="icone"
+                />
+              </div>
+            </li>
           ))}
         </ul>
       </div>

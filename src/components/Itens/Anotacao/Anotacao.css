@@ -1,41 +1,101 @@
-.blocoDeNotas {
-  position: fixed;
+.tarefas {
   display: flex;
   flex-direction: column;
+  background-color: #181818;
+  padding: 30px 20px;
+  width: 300px;
+  border: solid 0.5px #5a494949;
+  height: 330px;
+  border-radius: 10px;
   gap: 20px;
-  top: 40%;
-  left: 60%;
+  box-shadow: 0px 0px 15px 0px #000000;
+  position: fixed;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%,-50%);
+}
+
+.tarefas h1 {
   text-align: center;
-  margin-top: 2rem;
   color: var(--corbtn-background);
-  z-index: 2;
 }
 
-.note-container {
+.tarefas-input {
   display: flex;
-  justify-content: space-around;
-  gap: 30px;
-  margin-bottom: 1rem;
+  justify-content: space-between;
+  gap: 10px;
 }
 
-.notes-list {
-  text-align: left;
+.tarefas-input input {
+  width: 100%;
+  border-radius: 5px;
+  background-color: #111111;
+  outline: none;
+  border: solid 1px #383838;
+  padding: 8px;
+  color: #c1c1c1;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
+.tarefas-input input:focus {
+  background-color: #060606;
 }
 
-li {
-  margin-bottom: 0.5rem;
-}
-.blocoDeNotas button {
-  color: var(--background);
-  padding: 5px;
-  border-radius: 25px;
-  background-color: var(--corbtn-background);
-  border: none;
+.tarefas-input img {
+  width: 30px;
   cursor: pointer;
+}
+
+.tarefas-lista ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 230px;
+  overflow-y: auto;
+  border: solid 1px #383838;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.tarefas-lista ul::-webkit-scrollbar {
+  background-color: #383838;
+  width: 10px;
+  border-radius: 5px;
+  
+}
+
+.tarefas-lista ul::-webkit-scrollbar-thumb {
+  background-color: #5f5b5b;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+.tarefas-lista ul li {
+  display: flex;
+  padding: 10px;
+  background-color: #111111;
+  justify-content: space-between;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  color: var(--corbtn-background);
+}
+
+.icones {
+  display: flex;
+  gap: 8px;
+}
+
+.icone {
+  width: 18px;
+  align-self: center;
+  cursor: pointer;
+}
+
+.show {
+  opacity: 1 !important;
+}
+
+.check {
+  text-decoration: line-through;
+  color: #383838;
 }

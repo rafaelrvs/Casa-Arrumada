@@ -38,7 +38,7 @@ function activeCalendar (event){
   event.preventDefault()
 }
 function activeAnotacao (event){
-  setActiveFieldBackground(true)
+  setActiveFieldBackground(false)
   setActiveFieldAnotacao(true)
   setactiveFieldAgenda(false)
   setActiveStockPresentation(false)
