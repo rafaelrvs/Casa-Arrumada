@@ -9,6 +9,8 @@
 }
 .decimoTerceiroContainer h1{
   font-size: 20pt;
+  height: 10px;
+  margin-bottom: 50px;
 }
 .decimoTerceiroContainer form{
   display: flex;
@@ -52,9 +54,10 @@
   @media(max-width:600px){
     .decimoTerceiroContainer form{
       justify-content: center;
-      width: 200px;
-      margin-left: 100px;
-      margin-top: 1px;
+      width: 190px;
+      align-items: 	start;
+      margin-top: 50px;
+      margin-right: 55px;
       gap: 15px;
     }
     .decimoTerceiroContainer input{
@@ -62,9 +65,10 @@
       transition: 0.5s;
     }
     .decimoTerceiroContainer h1 {
-      font-size: 15pt;
+      font-size: 10pt;
       margin-left: 35px;
       margin-top: 25px;
+      height: 50px;
     }
     .decimoTerceiroContainer label{
       font-size: 7pt;

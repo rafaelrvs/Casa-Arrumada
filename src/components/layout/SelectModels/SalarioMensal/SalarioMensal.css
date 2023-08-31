@@ -1,7 +1,7 @@
 .containerSalarioMensal{
   position: fixed;
   top: 60%;
-  left: 60%;
+  left: 62%;
   transform: translate(-50%,-50%);
   display: flex;
   justify-content: center;
@@ -9,7 +9,8 @@
   z-index: 1;
 }
 .containerSalarioMensal h1{
-  margin-top: 35px;
+  margin-top: 3px;
+  height: 10px;
   font-size: 20pt;
 }
 .containerSalarioMensal form {
@@ -87,15 +88,19 @@
       gap: 10px;
       margin-bottom: 100px;
       transition: 0.5s;
+      margin-right: 40px;
     }
     .containerSalarioMensal input{
-      width: 190px;
+      width: 170px;
       transition: 0.5s;
+      margin-right: 50px;
     }
     .containerSalarioMensal h1{
-      margin-left: 10px;
+      width: 120px;
+      height: 50px;
+      margin-left: 50px;
       margin-top: 100px;
-      font-size: 15pt;
+      font-size: 10pt;
       transition: 0.5s;
   }
   .containerSalarioMensal .containerSubmit{

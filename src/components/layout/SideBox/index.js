@@ -8,6 +8,9 @@ import  './SideBox.css'
 import React,{useState} from 'react'
 
 
+class DisableContent{
+
+}
 
 
 const SideBox = () =>{
@@ -53,7 +56,16 @@ const SideBox = () =>{
     setSelectFieldPageCalculoSalario(false)
     event.preventDefault()
   }
-  
+  function handlerDisableBoxField(){
+    SideBox.setSelectFieldPage(false)
+    SideBox.setShowDecimoTerceiro(false)
+    SideBox.setselectFieldPageHoraExtra(false)
+    SideBox.setSelectFieldPageFerias(false)
+    SideBox.setSelectFieldPageCalculoSalario(false)
+
+
+  }
+
   return(
     <div className="container-box">
       <div className='container-img'>

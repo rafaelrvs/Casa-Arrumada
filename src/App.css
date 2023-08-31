@@ -20,8 +20,7 @@
 .side__box__container{
   position: fixed;
   display: flex;
-  height: 100%;
-  width: 250px;
+  height: 100vh;
   justify-content: center;
   align-items: center;
   grid-area: 1/1;
@@ -30,21 +29,15 @@
 
 }
 
-@media(max-width:860px){
-  
-    .side__box__container{
-      width: 200px;
-      transition: 0.5s;
-    }
- 
-  }
 @media(max-width:600px){
   
     .side__box__container{
-    
-      width: 150px;
+      width: 30%;
       transition: 0.5s;
    
+    }
+    .side__box__container p{
+      font-size: 9pt;
     }
     .menuAbove__container{
       display: flex;

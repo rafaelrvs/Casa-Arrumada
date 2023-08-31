@@ -1,7 +1,7 @@
 .vacation{
   position: fixed;
   top: 60%;
-  left: 60%;
+  left: 62%;
   transform: translate(-50%,-50%); 
   justify-content: center;
   align-items: center;
@@ -9,11 +9,13 @@
 }
 .vacation h1{
   font-size: 20pt;
+  height: 10px;
+  margin-bottom: 95px;
 }
 .vacation form{
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 10px;
 }
 .vacation input{
   height: 30px;
@@ -49,31 +51,36 @@
     transition: 0.5s;
   }
 }
-@media(max-width:600px){
-  .vacation form {
-    justify-content: center;
-      margin-left: 120px;
-      margin-top: 50px;
-      gap: 9px;
-    
-  }
-  .vacation input{
-    width: 200px;
-    margin-left: 25px;
-    transition: 0.5s;
 
+@media(max-width:600px){
+    .vacation form {
+  
+      justify-content: center;
+        margin-left: 150px;
+        margin-top: 50px;
+        gap: 5px;
+        margin-bottom: 10px;
+    }
+    .vacation input{
+      width: 170px;
+      transition: 0.5s;
+    }
+    .vacation h1{
+      margin-left: 50px;
+      width: 110px;
+      font-size: 10pt;
+      margin-top: 25px;
+      transition: 0.5s;
+      height: 50px;
+  
+    }
+    .vacation .container-btn{
+      width: 170px;
+      margin-right: 95px;
+      margin-bottom: 50px;
+       
+    }
+    .horaExtraSelecionada #btn{
+      width: 70px;
+    }
   }
-  .vacation h1{
-    font-size: 12pt;
-    margin-left: 80px;
-  }
-  .vacation .container-btn{
-    gap: 10px;
-    margin-top: 12px;
-    margin-bottom: 25px;
-    margin-right: 55px;
-  }
-  .vacation label{
-    margin-left: 25px;
-  }
-}

@@ -1,5 +1,5 @@
 .campo__Selecionado{
-  position: fixed;
+  position: fixed;;
   top: 60%;
   left: 60%;
   transform: translate(-50%,-50%);
@@ -11,7 +11,22 @@
   margin-left: 2% ;
 }
 .campo__Selecionado #closePage{
- 
+  margin-left: 25px;
+  margin-top: 20px;
   border:none;
+  height:30px;
+  width: 30px;
+  display: flex;
+
+
+
+}
+@media (max-width:600px) {
+  .campo__Selecionado{
+    height: 50%;
+    width: 60%;
+    margin-left: 25px;
+  }
+  
 }
 

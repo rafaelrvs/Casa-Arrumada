@@ -1,13 +1,14 @@
 .horaExtraSelecionada{
   position: fixed;
   top: 60%;
-  left: 60%;
+  left: 62%;
   transform: translate(-50%,-50%);
   text-align: start;
   z-index: 2;
 }
 .horaExtraSelecionada h1{
-  margin-bottom: 25px;
+  margin-bottom: 55px;
+  height: 10px;
 }
 .horaExtraSelecionada form{
 
@@ -78,27 +79,29 @@
     justify-content: center;
       margin-left: 150px;
       margin-top: 50px;
-      gap: 10px;
+      gap: 2px;
       margin-bottom: 10px;
   }
   .horaExtraSelecionada input{
-    width: 190px;
+    width: 170px;
     transition: 0.5s;
   }
   .horaExtraSelecionada h1{
-    margin-left: 190px;
-    font-size: 15pt;
-    margin-top: 10px;
+    display: flex;
+    width: 100px;
+    margin-left: 200px;
+    font-size: 10pt;
+    margin-top: 15px;
     transition: 0.5s;
 
   }
   .horaExtraSelecionada .container-form-btn{
-
-    width: 180px;
-    margin-right: 55px;
+  
+    width: 170px;
+    margin-right: 95px;
      
   }
   .horaExtraSelecionada #btn{
-    width: 100px;
+    width: 70px;
   }
 }
