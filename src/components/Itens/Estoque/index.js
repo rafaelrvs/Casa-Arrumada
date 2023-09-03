@@ -1,50 +1,57 @@
 
 import './Estoque.css';
 import React,{useState} from 'react';
-const outputDiv = document.getElementById('output');
+
 
 
 
 class ListToStoke{
-constructor(product){
-  this._listProduct=  product;
-}
-get listProduct(){
-  return this._listProduct;
-}
-set listProduct (value){
-  this._listProduct = value;
+constructor(product,descricao){
+
+  this.produto = product;
+ this.descricao = descricao;
+
 }
 
 }
 
 const Estoque = () =>{
-  const [valueToQuery,setValueToQuery] = useState('')
+  const [produto,setProduto] = useState('')
+  const [descricao,setDescricao] = useState('')
 
   const handlerSetValue = (event) =>{
-    const newValueInList = new ListToStoke(valueToQuery)
-  
-    console.log(newValueInList.listProduct)
-    
+   
+    const List  = new ListToStoke(produto,descricao);
+    console.log(List)
     event.preventDefault()
   }
 
   const handlerSetValueInVariable = (event) =>{
     
     const captureValue = event.target.value
-    setValueToQuery(captureValue)
+    setProduto(captureValue)
     event.preventDefault()
   }
+  const handlerSetDescription = (event) =>{
+   const captureValue = event.target.value
+   setDescricao(captureValue)
+
+  event.preventDefault();
+ }
+
+ function ativarConsulta(){
+  
+ }
   return(
     <div className="estoque-container">
         <form onSubmit={handlerSetValue} action="">
           <h1>Estoque</h1><br />
-          <input onChange={handlerSetValueInVariable} value={valueToQuery} type="text" placeholder='Nome do produto' />
-          <textarea name="description" id="description" cols="30" rows="10"></textarea>
+          <input onChange={handlerSetValueInVariable} value={produto} type="text" placeholder='Nome do produto' />
+          <textarea  onChange={handlerSetDescription} name="description" id="description" cols="30" rows="10"></textarea>
           <div className='content-btn'>
 
           <input type="submit" value="Adicionar"  id='btn'/>
-            <p>Consultar</p>
+            <p onClick={ativarConsulta} >Consultar</p>
             <p>Remover</p>
           </div>
        

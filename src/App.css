@@ -28,16 +28,25 @@
   background: var(--background);
 
 }
+@media(max-width:1000px){
+  .side__box__container{
+    width: 25%;
 
+ 
+}
+}
 @media(max-width:600px){
-  
-    .side__box__container{
+side__box__container{
       width: 30%;
       transition: 0.5s;
-   
+    
     }
     .side__box__container p{
+      text-align: start;
+      margin-right: 50px;
+      width: 90px;
       font-size: 9pt;
+
     }
     .menuAbove__container{
       display: flex;

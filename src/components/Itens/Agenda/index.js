@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { Component } from 'react'; 
 import './Agenda.css';
-
 
 
 
@@ -12,6 +11,10 @@ class Agenda extends React.Component {
 
   };
 
+  handleDayClick = (selectedDay) => {
+    this.setState({ selectedDay });
+    //desenvolver marcação do calendario
+  };
    handlermonthSelct = (event)=>{
     const listMonthWith31Days = [
       'Janeiro',
@@ -60,44 +63,46 @@ class Agenda extends React.Component {
   }
 
 
-  
   renderCalendar = () => {
     const { daysInMonth } = this.state;
     const calendar = [];
-    
-
+  
     let dayCounter = 1;
-    for (let week = 0; week < 5; week++) { // 5 semanas para simplificar o exemplo
+    for (let week = 0; week < 5; week++) { // 5 semanas para simplificar
       const row = [];
       for (let day = 0; day < 7; day++) {
         if (dayCounter <= daysInMonth) {
-          row.push(<td key={day}>{dayCounter}</td>);
+          const isCurrentDay = dayCounter === this.state.selectedDay; // Verifica se é o dia selecionado
+          const cellClass = isCurrentDay ? 'selectedDay' : ''; // Aplica a classe selectedDay se for o dia selecionado
+  
+          row.push(
+            <td
+              key={day}
+              className={cellClass}
+              onClick={() => this.handleDayClick(dayCounter)} // Chama uma função para lidar com o evento de clique
+            >
+              {dayCounter}
+            </td>
+          );
           dayCounter++;
         } else {
-          row.push(<td key={day}></td>);
+          row.push(<td key={day} ></td>);
         }
       }
       calendar.push(<tr key={week}>{row}</tr>);
     }
-    
+  
     return calendar;
+  
+  
   };
   
   render() {
 
-    
- 
-    const handlerSelectItem = (event)=>{
 
-    
-  }
-
-
-    
-   
     return (
       
-      <div onClick={handlerSelectItem} className='container__Agenda'>
+      <div className='container__Agenda'>
         <div className='container__btn_option'>
 
         <h2>Calendário</h2>
