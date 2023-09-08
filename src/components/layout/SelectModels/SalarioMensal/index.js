@@ -37,7 +37,7 @@ const  inserirdiaDeTrabalho = (event) =>{
 
 function insertValueInSalario(event){
   const newSalarioregister = new WageMonth(salario,hora ,diaDeTrabalho)
-  setValueWage(`Pague: R$${newSalarioregister.wageMain}`)
+  setValueWage(`Pague: R$${newSalarioregister.wageMain.toFixed(2)}`)
   event.preventDefault()
 }
 
@@ -53,8 +53,7 @@ return(
   <div className="containerSalarioMensal">
     <section>
       <form onSubmit={insertValueInSalario} action="">
-      <h1>Salario mensal: {valueWage}</h1> <br />
-
+      <h1>Salario mensal: {valueWage}</h1> 
         <label htmlFor="salarioPhora">Salario P/hora</label>
         <input id='salarioPhora' 
         type="Number"

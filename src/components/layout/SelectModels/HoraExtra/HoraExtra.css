@@ -1,107 +1,40 @@
 .horaExtraSelecionada{
-  position: fixed;
-  top: 60%;
-  left: 62%;
-  transform: translate(-50%,-50%);
-  text-align: start;
-  z-index: 2;
-}
-.horaExtraSelecionada h1{
-  margin-bottom: 55px;
-  height: 10px;
-}
-.horaExtraSelecionada form{
-
   display: flex;
+  position: fixed;
+  flex-direction: column;
+  top: 30%;
+  left: 40%;
+  gap: 50px;
+  height: 250px;
+  width: 650px;
   justify-content: center;
-  text-align: start;
-  width: 100%;
-  flex-direction: column  ;
-  gap: 20px;
-}
-.horaExtraSelecionada input{
-  width: 350px;
-  height: 30px;
-  border-radius: 25px;
-  border: none;
-
-}
-.horaExtraSelecionada label{
-  color: #fff;
-}
-.horaExtraSelecionada #btn{
-  width: 150px;
-  height: 50px;
-  background-color:var(--corbtn-background) ;
-  color:var(--background);
-  font-size: 10pt;
+  align-items: center;
 }
 
+.horaExtraSelecionada form{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 500px;
+  margin-bottom: 30px;
+}
 .horaExtraSelecionada .container-form-btn{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  margin-top: 14px;
+  width: 100%;
 }
-.horaExtraSelecionada #btn:hover{
- background-color: rgb(145, 241, 0);
+.horaExtraSelecionada #btn{
+  padding: 5px 15px;
+  border-radius: 5px;
+  color:  rgb(249, 221, 10);
+  background-color: rgba(0, 0, 0, 0.195);
+  box-shadow: 5px 5px 10px black;
+  border: none;
 }
-
-@media(max-width:860px){
-  .horaExtraSelecionada form {
-
-    justify-content: center;
-      margin-left: 100px;
-      margin-top: 50px;
-      gap: 10px;
-      margin-bottom: 10px;
-  }
-  .horaExtraSelecionada input{
-    width: 250px;
-    transition: 0.5s;
-  }
-  .horaExtraSelecionada h1{
-    margin-left: 100px;
-    margin-top: 12px;
-    transition: 0.5s;
-    margin-bottom: -25px;
-  }
-  .horaExtraSelecionada .container-form-btn{
-    
-    width: 250px;
-     
-  }
+.horaExtraSelecionada input{
+  border-radius: 25px;
+  border: none;
+  padding: 5px;
 }
 
-@media(max-width:600px){
-  .horaExtraSelecionada form {
-
-    justify-content: center;
-      margin-left: 150px;
-      margin-top: 50px;
-      gap: 2px;
-      margin-bottom: 10px;
-  }
-  .horaExtraSelecionada input{
-    width: 170px;
-    transition: 0.5s;
-  }
-  .horaExtraSelecionada h1{
-    display: flex;
-    width: 100px;
-    margin-left: 200px;
-    font-size: 10pt;
-    margin-top: 15px;
-    transition: 0.5s;
-
-  }
-  .horaExtraSelecionada .container-form-btn{
-  
-    width: 170px;
-    margin-right: 95px;
-     
-  }
-  .horaExtraSelecionada #btn{
-    width: 70px;
-  }
-}

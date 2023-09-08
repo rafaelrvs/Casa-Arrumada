@@ -1,113 +1,43 @@
 .containerSalarioMensal{
-  position: fixed;
-  top: 60%;
-  left: 62%;
-  transform: translate(-50%,-50%);
   display: flex;
+  position: fixed;
+  flex-direction: column;
+  top: 30%;
+  left: 40%;
+  gap: 50px;
+  height: 250px;
+  width: 650px;
   justify-content: center;
   align-items: center;
-  z-index: 1;
-}
-.containerSalarioMensal h1{
-  margin-top: 3px;
-  height: 10px;
-  font-size: 20pt;
-}
-.containerSalarioMensal form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  justify-content: flex-start;
 }
 
-.containerSalarioMensal input{
-  width: 350px;
-  height: 30px;
-  border: none;
-  border-radius: 25px;
+.containerSalarioMensal form{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 500px;
+  margin-top: 10px;
 }
 .containerSalarioMensal .containerSubmit{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-
+  width: 100%;
 }
+
+.containerSalarioMensal input{
+  border-radius: 25px;
+  border: none;
+  padding: 5px;
+}
+
+
+
 .containerSalarioMensal #btn{
-  width: 150px;
-  height: 50px;
-  background-color: var(--corbtn-background);
-  color: var(--background);
-}
-.containerSalarioMensal #btn:hover{
-  background-color : rgb(145, 241, 0);
-
-}
-@media(max-width:1000px){
-.containerSalarioMensal form{
-  width: 300px;
-  height: 350px;
-  margin-bottom: 50px;
-  transition: 0.5s;
- 
-
-  }
-  .containerSalarioMensal input{
-    padding: 5px;
-  }
-  .containerSalarioMensal h1{
-
-  }
-}
-@media(max-width:860px){
-  .containerSalarioMensal form {
-    justify-content: center;
-      margin-left: 130px;
-      margin-top: 50px;
-      margin-bottom: 100px;
-      transition: 0.5s;
-    }
-    .containerSalarioMensal input{
-      width: 250px;
-      transition: 0.5s;
-    }
-    .containerSalarioMensal h1{
-      margin-left: 100px;
-      margin-top: 50px;
-      margin-bottom: -25px;
-      transition: 0.5s;
-  }
-  .containerSalarioMensal .containerSubmit{
-   margin-right: 50px;
-  }
-}
-@media(max-width:600px){
-  .containerSalarioMensal form {
-    justify-content: center;
-      margin-left: 210px;
-      margin-top: 50px;
-      gap: 10px;
-      margin-bottom: 100px;
-      transition: 0.5s;
-      margin-right: 40px;
-    }
-    .containerSalarioMensal input{
-      width: 170px;
-      transition: 0.5s;
-      margin-right: 50px;
-    }
-    .containerSalarioMensal h1{
-      width: 120px;
-      height: 50px;
-      margin-left: 50px;
-      margin-top: 100px;
-      font-size: 10pt;
-      transition: 0.5s;
-  }
-  .containerSalarioMensal .containerSubmit{
-   margin-right: 150px;
-  }
-  .containerSalarioMensal #btn{
-    width: 100px;
-    margin-bottom: 15px;
-  }
+  padding: 5px 15px;
+  border-radius: 5px;
+  color:  rgb(249, 221, 10);
+  background-color: rgba(0, 0, 0, 0.195);
+  box-shadow: 5px 5px 10px black;
+  border: none;
 }

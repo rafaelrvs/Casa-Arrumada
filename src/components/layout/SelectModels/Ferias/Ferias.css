@@ -1,86 +1,40 @@
 .vacation{
+  display: flex;
   position: fixed;
-  top: 60%;
-  left: 62%;
-  transform: translate(-50%,-50%); 
+  flex-direction: column;
+  top: 30%;
+  left: 40%;
+  gap: 50px;
+  height: 250px;
+  width: 650px;
   justify-content: center;
   align-items: center;
-  z-index: 1;
-}
-.vacation h1{
-  font-size: 20pt;
-  height: 10px;
-  margin-bottom: 95px;
 }
 .vacation form{
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
-.vacation input{
-  height: 30px;
-  width: 350px;
-  border-radius: 25px;
-  border: none;
-}
-.vacation #btn{
-  border-radius: 25px;
-  background-color:var(--corbtn-background);
-  color:var(--background);
-  width: 150px;
-  height: 50px;
+  width: 500px;
+  margin-top: 5px;
 }
 .vacation .container-btn{
-  margin-top: 25px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  gap: 50px;
+  width: 100%;
 }
-.vacation #btn:hover{
-  background-color: rgb(145, 241, 0) ;
-}
-@media(max-width:860px){
-  .vacation form {
-    justify-content: center;
-      margin-left: 100px;
-      margin-top: 50px;
-  }
-  .vacation input{
-    width: 250px;
-    transition: 0.5s;
-  }
+.container-btn #btn{
+  padding: 5px 15px;
+  border-radius: 5px;
+  color:  rgb(249, 221, 10);
+  background-color: rgba(0, 0, 0, 0.195);
+  box-shadow: 5px 5px 10px black;
+  border: none;
 }
 
-@media(max-width:600px){
-    .vacation form {
-  
-      justify-content: center;
-        margin-left: 150px;
-        margin-top: 50px;
-        gap: 5px;
-        margin-bottom: 10px;
-    }
-    .vacation input{
-      width: 170px;
-      transition: 0.5s;
-    }
-    .vacation h1{
-      margin-left: 50px;
-      width: 110px;
-      font-size: 10pt;
-      margin-top: 25px;
-      transition: 0.5s;
-      height: 50px;
-  
-    }
-    .vacation .container-btn{
-      width: 170px;
-      margin-right: 95px;
-      margin-bottom: 50px;
-       
-    }
-    .horaExtraSelecionada #btn{
-      width: 70px;
-    }
-  }
+.vacation input{
+  border-radius: 25px;
+  border: none;
+  padding: 5px;
+}
+

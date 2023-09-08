@@ -74,7 +74,7 @@ const HoraExtra =()=>{
     const newPay = new HoraExtraRegistradaParaPagamento(porcentage,
       salarioHoraFuncionario,
       horaExtra)
-      setResposta(` pague R$ ${newPay.totalApagar}`)
+      setResposta(` pague R$ ${newPay.totalApagar.toFixed(2)}`)
     event.preventDefault()
   }
   
@@ -84,8 +84,6 @@ setResposta('')
 setPorcentage('')
 setsalarioHoraFuncionario('')
 sethoraExtra('')
-
-
 
     event.preventDefault()
     
@@ -98,10 +96,10 @@ sethoraExtra('')
     <div className='horaExtraSelecionada'>
       <div>
 
-      <h1>Hora Extra:  {resposta}</h1>
       </div>
      <section>
       <form onSubmit={handleSubmit} action="">
+      <h1>Hora Extra:  {resposta}</h1>
         <label htmlFor="percentageInput">Porcentagem:</label>
         <input
         type="Number"

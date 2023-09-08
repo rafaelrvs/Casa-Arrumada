@@ -22,7 +22,7 @@ const Estoque = () =>{
   const handlerSetValue = (event) =>{
    
     const List  = new ListToStoke(produto,descricao);
-    console.log(List)
+
     event.preventDefault()
   }
 
