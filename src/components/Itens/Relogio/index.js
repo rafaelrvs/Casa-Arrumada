@@ -50,13 +50,16 @@ const Relogio = () => {
 
   }
 
-  function backpage(event){
+  function backPage(event){
     window.location.reload()
     event.preventDefault()
   }
   return (
     <div className="cronometro">
-      <p id="closePage" onClick={backpage}>x</p>
+      <div className="closePage">
+     <img  onClick={backPage} id='closePage' src="../img/xis.svg" alt="close Page" />
+
+      </div>
       <h1 id="watch">{valueHours}</h1>
       <div className="btn-container">
         <button className="button-btn-start" onClick={play}>

@@ -23,9 +23,13 @@
   height: 85px;
   background-color: rgb(249, 221, 10);
   width: 100%;
-
+  
 }
 .side__box__container p:hover {
+  cursor: pointer;
   transition: 0.2s;
   scale:1.2;
+}
+.menuAbove__container:hover{
+  cursor: pointer;
 }

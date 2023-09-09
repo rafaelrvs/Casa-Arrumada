@@ -1,0 +1,66 @@
+.tarefas{
+  position: fixed;
+ display: flex;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%,-50%);
+ flex-direction: column;
+ border-radius: 25px;
+ background-color: rgba(0, 0, 0, 0.664);
+ color: rgb(249, 221, 10);
+ justify-content: center;
+ align-items: center;
+ height: 300px;
+ width: 500px;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 200px;
+
+}
+.tarefas-input{
+  display:flex;
+  width: 280px;
+  gap:10px;
+  margin-left: 35px;
+  justify-content: space-around;
+  align-items: center;
+}
+.tarefas-input input{
+  width: 350px;
+  border-radius: 5px;
+}
+ .icone{
+  height:30px;
+}
+.tarefas-lista{
+  display: flex;
+  justify-content: center;
+  width: 400px;
+  height: 100%;
+ overflow: hidden;
+}
+.tarefas h1{
+  margin-top: 25px;
+}
+.show{
+  display: flex;
+  width: 350px;
+  justify-content: flex-start;
+  margin-top: 25px;
+  gap: 10px;
+
+}
+#contagem{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 50px;
+  font-size: 10pt;
+ 
+}
+

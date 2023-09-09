@@ -5,7 +5,7 @@ import "./Anotacao.css";
 function Anotacao() {
   const [inputValue, setInputValue] = useState("");
   const [tasks, setTasks] = useState([]);
-  const [contPassWord, setContWord] = useState(0);
+  const [contPassWord, setContWord] = useState('');
 
   const handleInputChange = (event) => {
     let insertingValue = event.target.value
@@ -31,7 +31,7 @@ function Anotacao() {
       };
       setTasks([...tasks, newTask]);
       setInputValue("");
-      setContWord(0)
+      setContWord('')
     }
   };
 
@@ -48,11 +48,12 @@ function Anotacao() {
 
   return (
     <div className="tarefas">
-      <div>
+      <div className="container">
       <h1>Anotação</h1>
       <h2 id="contagem">{contPassWord}</h2>
       </div>
       <div className="tarefas-input">
+      
         <input
           type="text"
           placeholder="Adicione a tarefa"
@@ -91,7 +92,9 @@ function Anotacao() {
             </li>
           ))}
         </ul>
+     
       </div>
+            
     </div>
   );
 }

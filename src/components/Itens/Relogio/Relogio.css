@@ -1,0 +1,48 @@
+.cronometro{
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  top: 30%;
+  left: 40%;
+  gap: 10px;
+  height: 100px;
+  width: 250px;
+  border-radius: 25px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.696);
+  color:  rgb(249, 221, 10);
+  box-shadow: 5px 5px 15px black;
+}
+.cronometro .closePage{
+  height: 25px;
+  width: 250px;
+}
+.cronometro #closePage{
+  margin: 20px;
+  height: 25px;
+}
+.cronometro .btn-container{
+  display: flex;
+  margin-bottom: 25px;
+  gap: 25px;
+}
+.cronometro .btn-container :hover{
+  cursor: pointer;
+}
+
+.cronometro .button-btn-start{
+  padding: 5px;
+  border-radius: 25px;
+  border: none;
+}
+.cronometro .button-btn-stop{
+  padding: 5px;
+  border-radius: 25px;
+  border: none;
+}
+.cronometro .button-btn-reset{
+  padding: 5px;
+  border-radius: 25px;
+  border: none;
+}

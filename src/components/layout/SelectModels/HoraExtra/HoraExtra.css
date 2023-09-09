@@ -23,6 +23,7 @@
   justify-content: space-around;
   align-items: center;
   width: 100%;
+  margin-top: 5px;
 }
 .horaExtraSelecionada #btn{
   padding: 5px 15px;
