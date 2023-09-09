@@ -3,6 +3,7 @@
 }
 .container-menuAbove section{
   display: flex;
+  width: auto;
   gap: 50%;
   margin-right: 50%;
 }

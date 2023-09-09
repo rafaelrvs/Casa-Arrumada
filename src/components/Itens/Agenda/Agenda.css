@@ -1,0 +1,26 @@
+.container__Agenda{
+  position: fixed;
+  display: flex;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%,-50%);
+  flex-direction: column;
+  gap: 10px;
+  color: rgb(249, 221, 10) ;
+}
+.container__Agenda .container__btn_option{
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+}
+.container__Agenda td{
+  margin-top: 10px;
+  width: 100px;
+  text-align: center;
+}
+
+.container__Agenda td:hover{
+  background-color: rgba(249, 221, 10, 0.306) ;
+}
