@@ -23,6 +23,7 @@
   align-items: center;
   height: 85px;
   background-color: rgb(249, 221, 10);
+  box-shadow: 5px 0 15px;
   width: 100%;
   
 }
