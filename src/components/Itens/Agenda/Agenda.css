@@ -24,3 +24,29 @@
 .container__Agenda td:hover{
   background-color: rgba(249, 221, 10, 0.306) ;
 }
+
+
+@media(max-width:850px) {
+  .container__Agenda{
+    font-size: 9pt;
+    gap: 15pt;
+  }
+  .container__Agenda .container__btn_option{
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  .container__Agenda tr{
+   font-size: 7pt;
+  }
+  
+  .container__Agenda td{
+   width: 10px;
+  }
+ .calendar{
+  font-size: 9px;
+  width: 350px;
+ }  
+}

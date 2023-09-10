@@ -7,8 +7,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: start;
-  align-items: center;
+  text-align: center;
+  align-items: start;
   height: 100vh;
   width: 20%;
   gap: 50px;
@@ -34,4 +34,8 @@
 }
 .menuAbove__container:hover{
   cursor: pointer;
+}
+
+@media (max-width:900px) {
+
 }

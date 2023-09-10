@@ -1,9 +1,28 @@
 .container-menuAbove{
- 
+justify-content: center;
+align-items: center;
+display: flex;
+width: 100%;
 }
 .container-menuAbove section{
   display: flex;
+  justify-content: center;;
+  text-align: center;
   width: auto;
-  gap: 50%;
-  margin-right: 50%;
+  gap: 50px;
+  margin-left: 150px;
+}
+
+@media (max-width:650px) {
+ .container-menuAbove section{
+  font-size: 10pt;
+  gap: 15px;
+ } 
+}
+@media (max-width:460px) {
+ .container-menuAbove section{
+  font-size: 8pt;
+  gap: 10px;
+  margin-right: 40px;
+ } 
 }
