@@ -1,8 +1,10 @@
+:root{
+  --corFonte: rgb(249, 221, 10);
+}
 *{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
  
 }
-
 p:hover{
  scale:1.1;
 }
