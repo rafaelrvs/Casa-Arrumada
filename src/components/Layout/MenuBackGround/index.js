@@ -1,11 +1,7 @@
 
 import MenuBtnClosePage from "../MenuBtnClosePage";
-import MenuButtonMain from "../MenuButtonMain/Index";
 import"./MenuBackground.css"
-
-
-const MenuBackground = ({menuState}) =>{
-  console.log(menuState);
+const MenuBackground = () =>{
 
    return(
     <div >

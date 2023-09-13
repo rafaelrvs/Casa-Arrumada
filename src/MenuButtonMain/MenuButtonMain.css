@@ -7,6 +7,7 @@
   align-items: center;
   color: var(--corFonte);
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   row-gap: 50px;
+  box-shadow: 0 5px 10px yellow;
 }

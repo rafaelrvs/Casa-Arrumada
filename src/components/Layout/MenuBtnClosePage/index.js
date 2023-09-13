@@ -1,9 +1,16 @@
 import "./MenuBtnClosePage.css";
 
 const MenuBtnClosePage = () =>{
+  function disablePage (event){
+
+    
+    event.preventDefault();
+  }
+
+
   return(
     <div className="container__img">
-        <img  id="img" src="../img/xis.svg" alt=""/>
+        <img onClick={disablePage} id="img" src="../img/xis.svg" alt=""/>
     </div>
   );
 }

@@ -1,21 +1,26 @@
-import { useState } from "react";
 import "./MenuButtonMain.css"
+import Logo from "../components/Layout/Logo";
 
-import MenuBackground from "../MenuBackGround";
+
 const MenuButtonMain = () =>{
-  const  [activePageThirtheenSalary,setActivePageThirtheenSalary] = useState(false);
-  
+
   function HandlerEnablingThirtheenSalary(event){
-    setActivePageThirtheenSalary(true);
-    event.preventDefault();
+  
+  event.preventDefault();
+
   }
 
   return(
     <div className="containerOption">
+      <div>
+        <Logo/>
+      </div>
         <p onClick={HandlerEnablingThirtheenSalary}> Decimo terceiro</p>
         <p>Calculo da Hora extra</p>
         <p>Calculo de ferias</p>
         <p>Calculo do salario</p>
+        
+  
         <p></p>
     </div>
   );
