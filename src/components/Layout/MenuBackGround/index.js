@@ -1,4 +1,4 @@
-
+import ThirteenFirstSalary from "../../Itens/OpitionsChosen/ThirteenFirstSalary";
 import MenuBtnClosePage from "../MenuBtnClosePage";
 import"./MenuBackground.css"
 const MenuBackground = () =>{
@@ -8,7 +8,8 @@ const MenuBackground = () =>{
           <div className="containerMenuBtn">
             <MenuBtnClosePage />
           </div>
-          <div>
+          <div className="two__container__main">
+            <ThirteenFirstSalary />
          </div>
 
 

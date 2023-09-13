@@ -77,7 +77,7 @@ const ThirteenFirstSalary = () =>{
           placeholder=' Digite os meses trabalhados'
           
           />
-          <div className='container-btn'>
+          <div className='container__btn'>
           <input id='btn' type="submit" value="Calcular" />
           <p onClick={clearPage}>Limpar</p>
           </div>
