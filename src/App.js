@@ -1,19 +1,14 @@
-import { useState } from 'react';
-import './App.css'
-import MenuBackground from './components/Layout/MenuBackGround';
-import MenuButtonMain from './MenuButtonMain/Index';
+/*Criação da interface inicial
+Layout responsavel por armazenar conteudo principal
+*/
+
+import "./App.css"
+import PlanoDeFundo from "./components/layout/main/PlanoDeFundo"
 const App =()=>{
-
   return(
-    <div className='container__main'>
-      <div className='side__box'>
-        <MenuButtonMain />
-      </div>
-
-      <div>
-       <MenuBackground/>;
-      </div>
+    <div className="App">
+      <PlanoDeFundo/>
     </div>
-  );
+  )
 }
-export default App;
+export default App
