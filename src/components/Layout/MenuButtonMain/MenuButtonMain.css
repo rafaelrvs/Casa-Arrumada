@@ -1,0 +1,12 @@
+.containerOption{
+  height: 100vh;
+  width: 150%;
+  padding: 15px;
+  background-color: var(--menuOpitionSide);
+  justify-content: center;
+  align-items: center;
+  color: var(--corFonte);
+  display: flex;
+  flex-direction: column-reverse;
+  row-gap: 50px;
+}

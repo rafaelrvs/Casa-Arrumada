@@ -1,0 +1,11 @@
+.container__main{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+width: 100%;
+gap: 25%;
+display: flex;
+justify-content: flex-start;
+align-items: center;
+}

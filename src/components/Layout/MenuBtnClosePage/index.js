@@ -2,8 +2,8 @@ import "./MenuBtnClosePage.css";
 
 const MenuBtnClosePage = () =>{
   return(
-    <div>
-        <img src="../img/xis.svg" alt="" />
+    <div className="container__img">
+        <img  id="img" src="../img/xis.svg" alt=""/>
     </div>
   );
 }

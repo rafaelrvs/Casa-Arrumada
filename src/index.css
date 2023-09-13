@@ -1,9 +1,21 @@
 :root{
   --corFonte: rgb(249, 221, 10);
+  --background: rgb(109, 23, 3) ;;
+  --boxContainer: rgb(11, 11, 104);
+  --menuOpitionSide:rgb(48, 46, 37);
 }
 *{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
- 
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:var(--planoDeFundo);
 }
 p:hover{
  scale:1.1;

@@ -1,4 +1,6 @@
 import { useState } from "react";
+import "./MenuButtonMain.css"
+
 import MenuBackground from "../MenuBackGround";
 const MenuButtonMain = () =>{
   const  [activePageThirtheenSalary,setActivePageThirtheenSalary] = useState(false);
@@ -9,8 +11,12 @@ const MenuButtonMain = () =>{
   }
 
   return(
-    <div>
+    <div className="containerOption">
         <p onClick={HandlerEnablingThirtheenSalary}> Decimo terceiro</p>
+        <p>Calculo da Hora extra</p>
+        <p>Calculo de ferias</p>
+        <p>Calculo do salario</p>
+        <p></p>
     </div>
   );
 }

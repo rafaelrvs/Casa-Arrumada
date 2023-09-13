@@ -6,12 +6,12 @@ const App =()=>{
 
 
   return(
-    <div>
-      <div>
-      <MenuBackground/>
+    <div className='container__main'>
+      <div className='side__box'>
+        <MenuButtonMain />
       </div>
       <div>
-        <MenuButtonMain />
+      <MenuBackground/>
       </div>
     </div>
   );
