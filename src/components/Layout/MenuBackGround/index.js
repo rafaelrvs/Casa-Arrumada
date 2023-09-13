@@ -1,15 +1,22 @@
-import"./MenuBacground.css"
+
+import MenuBtnClosePage from "../MenuBtnClosePage";
+import MenuButtonMain from "../MenuButtonMain/Index";
+import"./MenuBackground.css"
 
 
-const MenuBacground = () =>{
+const MenuBackground = ({menuState}) =>{
+  console.log(menuState);
+
    return(
-    <div>
+    <div >
           <div className="containerMenuBtn">
-            
+            <MenuBtnClosePage />
           </div>
+          <div>
+         </div>
 
-          
+
     </div>
    );
 }
-export default MenuBacground
+export default MenuBackground;
