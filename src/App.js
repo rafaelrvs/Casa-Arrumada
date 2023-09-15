@@ -3,11 +3,17 @@ Layout responsavel por armazenar conteudo principal
 */
 
 import "./App.css"
-import PlanoDeFundo from "./components/layout/main/PlanoDeFundo"
+import SideBoxLeft from "./components/Layout/SideBoxLeft"
+
 const App =()=>{
   return(
     <div className="App">
-      <PlanoDeFundo/>
+       <div>
+        <SideBoxLeft/>
+       </div>
+       <div>
+
+       </div>
     </div>
   )
 }

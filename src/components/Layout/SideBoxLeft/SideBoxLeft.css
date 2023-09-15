@@ -1,0 +1,7 @@
+.container__box__left{
+  background-color: var(--menuOpitionSide);
+  height: 100vh;
+  width: 300px;
+  box-shadow: 10px 10px 10px black;
+  z-index: 999;
+}
