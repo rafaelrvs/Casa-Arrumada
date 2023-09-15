@@ -1,0 +1,8 @@
+.container-img{
+  display: none;
+  height: 150px;
+}
+.container-img #img{
+  display: none;  
+ height: 150px;
+}

@@ -8,6 +8,7 @@ import "./BoxTop.css";
 const BoxTop =()=>{
   return(
     <div className="container__BoxTop">
+     
       <div className="content">
       <TextContentInSideBox/> Cronometro
       <TextContentInSideBox/> Anotação
