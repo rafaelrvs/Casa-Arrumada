@@ -1,8 +1,12 @@
 .App{
-  display: flex;
+  position: fixed;
+ display: flex;
+  height: 100vh;
+  width: 100vh;
 }
-.top__container_App{
-  width: 150vh;
- 
-  margin-left: 5%;
+.App .top__container_App{
+  display: flex;
+  width: 100%;
+  height: 150px;
+  
 }
