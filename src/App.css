@@ -1,0 +1,8 @@
+.App{
+  display: flex;
+}
+.top__container_App{
+  width: 150vh;
+ 
+  margin-left: 5%;
+}

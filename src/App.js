@@ -3,6 +3,7 @@ Layout responsavel por armazenar conteudo principal
 */
 
 import "./App.css"
+import BoxTop from "./components/Layout/BoxTop"
 import SideBoxLeft from "./components/Layout/SideBoxLeft"
 
 const App =()=>{
@@ -11,8 +12,8 @@ const App =()=>{
        <div>
         <SideBoxLeft/>
        </div>
-       <div>
-
+       <div className="top__container_App">
+        <BoxTop/>
        </div>
     </div>
   )
