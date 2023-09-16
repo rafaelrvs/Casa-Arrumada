@@ -8,7 +8,7 @@
   color: var(--boxContainer);
   background-color: var(--boxContainer);
   box-shadow: 5px 5px 15px black;
-  z-index: 1;
+  z-index: 3;
 
 }
 .container__BoxTop .content{
@@ -39,10 +39,9 @@
 }
 @media(max-width:510px) {
   .container__BoxTop .content{
-    font-size: 9pt;
+    font-size: 10pt;
     width: 60%;
-    gap: 7px;
- 
+    margin-right: 25px;
   }
 }
 
@@ -52,4 +51,8 @@
   cursor: pointer;
   color: black;
   
+}
+.content div{
+text-align: center;
+ width: 80px;
 }
