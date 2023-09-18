@@ -1,18 +1,22 @@
 .container__box__left{
+  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 30px;
   align-items: center;
+  width: 40px;
   background-color: var(--menuOpitionSide);
   height: 100vh;
   transition: 0.5s;
-  width: 50px;
   box-shadow: 10px 10px 10px black;
   color: var(--menuOpitionSide);
   cursor: pointer;
   z-index: 999;
+
 }
+
+
 @media (max-width:1000px) {
     .container__box__left{
       width: 50px;

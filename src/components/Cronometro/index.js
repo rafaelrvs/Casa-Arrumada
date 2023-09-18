@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Cronometro.css";
+import ClosePage from "../Layout/ClosePage";
 
 let sec = 0;
 let min = 0;
@@ -46,19 +47,18 @@ const Cronometro = () => {
     setValueHours(
       doisdigitos(hr) + ":" + +doisdigitos(min) + ":" + doisdigitos(sec)
     );
-
-
+    
   }
-
-  function backpage(event){
-    window.location.reload()
-    event.preventDefault()
+  function disablePage(event){
+    stopAction();
+    resetAction();
+    
+   event.preventDefault();
   }
   return (
     <div className="cronometro">
-      <div className="container-close">
-      <img id="close" onClick={backpage} src="./img/xis.svg" alt="close page" />
-
+      <div className="container-close" onClick={disablePage}>
+      <ClosePage/>
       </div>
       <h1 id="watch">{valueHours}</h1>
       <div className="btn-container">

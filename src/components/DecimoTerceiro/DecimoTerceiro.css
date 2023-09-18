@@ -42,14 +42,49 @@
   
   }
 
- @media (max-width:920px) {
+ @media (max-width:1000px) {
   .decimoTerceiroContainer{
     left: 65%;
-    height: 500px;  
-    width: 500px;
+  }
+  .decimoTerceiroContainer form{
+    height: 300px;  
+    width: 300px;
+    justify-content: center;
+    align-items: start;
   }
   .decimoTerceiroContainer .container-btn{
     margin-top: 15px;
+    justify-content: space-around;
+    width: 100%;
+  }
+  .decimoTerceiroContainer input{
+    padding: 5px;
+    width: 300px;
   }
   
+ }
+
+ @media (max-width:750px) {
+   .decimoTerceiroContainer{
+    left: 69%;
+  }
+  .decimoTerceiroContainer form{
+    height: 100%;
+    width: 100%;
+    gap: 10px;
+  }
+  .decimoTerceiroContainer input{
+    width: 100%;
+  }
+  .decimoTerceiroContainer{
+    width: 50%;
+  }
+  .decimoTerceiroContainer .container-btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .decimoTerceiroContainer #btn{
+    width: 100px;
+  }
  }

@@ -9,7 +9,7 @@ import SideBoxLeft from "./components/Layout/SideBoxLeft"
 const App =()=>{
   return(
     <div className="App">
-       <div>
+       <div className="">
         <SideBoxLeft/>
        </div>
        <div className="top__container_App">

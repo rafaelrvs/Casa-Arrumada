@@ -18,10 +18,11 @@ const [decimoAtivo,setDecimoAtivo] = useState(false);
   }
   return (
     <div className="container__box__left">
-      <div>
+      <div className="menuMais__Logo">
         <img className="maisImg" src="./img/mais.svg" alt="" />
       </div>
-      <div>
+
+      <div className="container_menuEmpresa_logo">
         <Logo />
       </div>
       <div>
@@ -40,10 +41,12 @@ const [decimoAtivo,setDecimoAtivo] = useState(false);
         <TextContentInSideBox />
         Calculo de Adicional noturno
       </div>
-
-
+      <div>
       {decimoAtivo&&<DescimoTerceiro/>}
+
+      </div>
     </div>
+
   );
 };
 export default SideBoxLeft;

@@ -1,8 +1,9 @@
 .App{
   position: fixed;
- display: flex;
+  display: flex;
   height: 100vh;
   width: 100vh;
+  
 }
 .App .top__container_App{
   display: flex;
@@ -10,3 +11,4 @@
   height: 150px;
   
 }
+
