@@ -10,6 +10,7 @@
   width: 50px;
   box-shadow: 10px 10px 10px black;
   color: var(--menuOpitionSide);
+  cursor: pointer;
   z-index: 999;
 }
 @media (max-width:1000px) {
