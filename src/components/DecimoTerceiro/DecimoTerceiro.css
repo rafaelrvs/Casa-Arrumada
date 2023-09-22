@@ -72,17 +72,21 @@
     height: 100%;
     width: 100%;
     gap: 10px;
+    justify-content: center;
+    align-items: center;
   }
   .decimoTerceiroContainer input{
     width: 100%;
   }
   .decimoTerceiroContainer{
+    display: flex;
     width: 50%;
   }
   .decimoTerceiroContainer .container-btn{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 10px;
   }
   .decimoTerceiroContainer #btn{
     width: 100px;
