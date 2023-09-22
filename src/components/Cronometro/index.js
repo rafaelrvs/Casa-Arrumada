@@ -6,7 +6,7 @@ let sec = 0;
 let min = 0;
 let hr = 0;
 let intervalo = 0;
-let digito = 0;
+
 
 const Cronometro = () => {
   const [valueHours, setValueHours] = useState("00:00:00");
@@ -36,11 +36,11 @@ const Cronometro = () => {
 
   function watch() {
     sec++;
-    if (sec == 60) {
+    if (sec === 60) {
       min++;
       sec = 0;
     }
-    if (min == 60) {
+    if (min === 60) {
       hr++;
       min = 0;
     }

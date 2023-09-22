@@ -1,82 +1,65 @@
 .container__box__left{
-  position: absolute;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  gap: 30px;
   align-items: center;
-  width: 40px;
-  background-color: var(--menuOpitionSide);
+  flex-direction: column;
   height: 100vh;
+  background-color: var(--menuOpitionSide);
+  width: 50px;
+ position: absolute;
+ transition: 0.5s;
+ cursor: pointer;
+}
+/*Variavel global Logo*/
+.container-img{
+  display: none;
+}
+.menuMais__Logo{
+  display: flex;
+  height: 40px;
+  margin-bottom: 150px;
+}
+
+.textContent{
+  display: none;
+}
+
+.container__box__left:hover{
+  width: 180px;
   transition: 0.5s;
-  box-shadow: 10px 10px 10px black;
-  color: var(--menuOpitionSide);
-  cursor: pointer;
-  z-index: 999;
-
-}
-
-
-@media (max-width:1000px) {
-    .container__box__left{
-      width: 50px;
-    }
-    .container__box__left:hover{
-      width: 90px;
-      cursor: pointer;
-      color: var(--corFonte);
-      transition: 0.5s;
-    }
-}
-@media (max-width:680px) {
-    .container__box__left{
-     font-size: 9pt;
-     width: 50px;
-    }
+  .menuMais__Logo{
+    display: none;
     
-    .container__box__left:hover{
-      width: 50px;
-      cursor: pointer;
-      color: var(--corFonte);
-      transition: 0.5s;
-    }
-}
-@media(max-width:510px) {
-  .container__box__left{
-    font-size: 8pt;
-    .container__box__left:hover{
-      width: 50px;
-      cursor: pointer;
-      color: var(--corFonte);
-      transition: 0.5s;
-    }
   }
-  .container__box__left:hover{
-    width: 90px;
-    cursor: pointer;
+  .textContent{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 100px;
     color: var(--corFonte);
     transition: 0.5s;
+    text-align: center;
   }
-}
-
-@media (min-width:1001px) {
-  
-}
-.container__box__left:hover{
-  width: 240px;
-  color: var(--corFonte);
+  .container_menuEmpresa_logo{
+    display: flex;
+    height: 100vh;
+  }
   .container-img{
     display: flex;
+    margin-top: 150px;
   }
-  .container-img #img{
-    display: flex;
 
+}
+@media (max-width:450px) {
+  .container__box__left:hover{
+    width: 100px;
+    font-size: 7pt;
+  
   }
-  .maisImg{
-    display: none;
+  .container-img{
+    height: 100px;
+  }
 
-  }
+
 }
-.maisImg{
-  height: 25px;
-}
+

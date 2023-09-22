@@ -7,15 +7,26 @@ import Logo from "../Logo";
 import TextContentInSideBox from "../TextContentInSideBox";
 import "./SideBoxLeft.css";
 import DescimoTerceiro from "../../DecimoTerceiro";
+import Ferias from "../../Ferias";
 
 const SideBoxLeft = () => {
 const [decimoAtivo,setDecimoAtivo] = useState(false);
+const [feriasAtiva,setFeriasAtiva] = useState(false);
 
 
   function activeModelCalcDecimo(event){
     setDecimoAtivo(true);
+    setFeriasAtiva(false);
     event.preventDefault();
   }
+  function activeModelCalcFerias(event){
+    setFeriasAtiva(true);
+    setDecimoAtivo(false);
+    event.preventDefault();
+  }
+
+
+
   return (
     <div className="container__box__left">
       <div className="menuMais__Logo">
@@ -25,7 +36,9 @@ const [decimoAtivo,setDecimoAtivo] = useState(false);
       <div className="container_menuEmpresa_logo">
         <Logo />
       </div>
-      <div>
+      <div className="textContent">
+
+      <div onClick={activeModelCalcFerias} >
         <TextContentInSideBox />
         Calculo de ferias
       </div>
@@ -43,7 +56,9 @@ const [decimoAtivo,setDecimoAtivo] = useState(false);
       </div>
       <div>
       {decimoAtivo&&<DescimoTerceiro/>}
+      {feriasAtiva&&<Ferias/>}
 
+      </div>
       </div>
     </div>
 

@@ -1,0 +1,43 @@
+.vacation{
+  position: fixed;
+  top: 60%;
+  left: 55%;
+  transform: translate(-50%,-50%);
+  justify-content: center;
+  background-color: var(--menuOpitionSide);
+  color: var(--corFonte);
+  padding: 50px;
+  border-radius: 25px;
+  align-items: center;
+  z-index: 1;
+}
+.vacation h1{
+  font-size: 20pt;
+}
+.vacation form{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 30px;
+}
+.vacation input{
+  width: 350px;
+  height: 30px;
+  border-radius: 25px;
+  border: none;
+}
+.vacation .container-btn{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.vacation #btn{
+  width: 150px;
+  background-color: var(--corFonte);
+  height: 50px;
+  color: var(--background);
+}
+.vacation #btn:hover{
+  background-color : rgb(145, 241, 0);
+
+}
