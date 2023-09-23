@@ -6,6 +6,7 @@
   height: 100vh;
   background-color: var(--menuOpitionSide);
   width: 50px;
+  box-shadow: 1px 1px 5px black;
  position: absolute;
  transition: 0.5s;
  cursor: pointer;
@@ -21,15 +22,19 @@
 }
 
 .textContent{
-  display: none;
+  display: flex;
+  color: var(--menuOpitionSide);
+  font-size: 10pt;
+  flex-direction: column;  
+  margin-right: 25px;
 }
 
-.container__box__left:hover{
+
+ .container__box__left:hover{
   width: 180px;
   transition: 0.5s;
   .menuMais__Logo{
-    display: none;
-    
+    display: none; 
   }
   .textContent{
     display: flex;
@@ -52,15 +57,23 @@
 }
 @media (max-width:450px) {
   .container__box__left:hover{
-    width: 100px;
+    width: 130px;
     font-size: 7pt;
-  
+    text-align: center;
+    
   }
   .container-img{
     height: 100px;
+    margin-bottom: 90px;
   }
- .textContent{
-  margin-bottom: 100px;
+  .textContent{
+    display: flex;
+    font-size: 9pt;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 10px;
+    
  }
 
 }
