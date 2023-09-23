@@ -8,23 +8,47 @@ import TextContentInSideBox from "../TextContentInSideBox";
 import "./SideBoxLeft.css";
 import DescimoTerceiro from "../../DecimoTerceiro";
 import Ferias from "../../Ferias";
+import HoraExtra from "../../HoraExtra";
+import SalarioMensal from "../../SalarioMensal";
 
 const SideBoxLeft = () => {
 const [decimoAtivo,setDecimoAtivo] = useState(false);
 const [feriasAtiva,setFeriasAtiva] = useState(false);
+const [horaExtraAtiva,setHoraExtraAtiva] = useState(false);
+const [salarioMensalAtivo,setSalarioMensalAtivo] = useState(false);
+
 
 
   function activeModelCalcDecimo(event){
     setDecimoAtivo(true);
+    setSalarioMensalAtivo(false);
+    setHoraExtraAtiva(false);
     setFeriasAtiva(false);
     event.preventDefault();
   }
+  
   function activeModelCalcFerias(event){
     setFeriasAtiva(true);
     setDecimoAtivo(false);
+    setSalarioMensalAtivo(false);
+    setHoraExtraAtiva(false);
     event.preventDefault();
   }
-
+  
+  function activeHoraExtra(event){
+    setHoraExtraAtiva(true);
+    setSalarioMensalAtivo(false);
+    setFeriasAtiva(false);
+    setDecimoAtivo(false);
+    event.preventDefault();
+  }
+  function ActiveSalarioMensal(event){
+    setSalarioMensalAtivo(true);
+    setHoraExtraAtiva(false);
+    setFeriasAtiva(false);
+    setDecimoAtivo(false);
+    event.preventDefault();
+  }
 
 
   return (
@@ -46,17 +70,19 @@ const [feriasAtiva,setFeriasAtiva] = useState(false);
         <TextContentInSideBox />
         Calculo de decimo terceiro
       </div>
-      <div>
+      <div onClick={activeHoraExtra}>
         <TextContentInSideBox />
         Calculo de Hora Extra
       </div>
-      <div>
+      <div onClick={ActiveSalarioMensal}>
         <TextContentInSideBox />
-        Calculo de Adicional noturno
+        Calculo Salario mensal
       </div>
       <div>
       {decimoAtivo&&<DescimoTerceiro/>}
       {feriasAtiva&&<Ferias/>}
+      {horaExtraAtiva&&<HoraExtra/>}
+      {salarioMensalAtivo&&<SalarioMensal/>}
 
       </div>
       </div>

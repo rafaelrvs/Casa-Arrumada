@@ -1,0 +1,102 @@
+
+
+.horaExtraSelecionada{
+  position: fixed;
+  top: 60%;
+  left: 55%;
+  transform: translate(-50%,-50%);
+  justify-content: center;
+  background-color: var(--menuOpitionSide);
+  color: var(--corFonte);
+  padding: 50px;
+  border-radius: 25px;
+  align-items: center;
+  z-index: 1;
+}
+.horaExtraSelecionada h1{
+  font-size: 20pt;
+}
+.horaExtraSelecionada form{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 30px;
+}
+.horaExtraSelecionada input{
+  width: 350px;
+  height: 30px;
+  border-radius: 25px;
+  border: none;
+}
+.horaExtraSelecionada .container-form-btn{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.horaExtraSelecionada #btn{
+  width: 150px;
+  background-color: var(--corFonte);
+  height: 50px;
+  color: var(--background);
+}
+.horaExtraSelecionada #btn:hover{
+    background-color : rgb(145, 241, 0);
+  
+  }
+
+ @media (max-width:1000px) {
+  .horaExtraSelecionada{
+    left: 65%;
+  }
+  .horaExtraSelecionada form{
+    height: 450px;  
+    width: 310px;
+    justify-content: center;
+    align-items: start;
+  }
+  .horaExtraSelecionada .container-form-btn{
+    margin-top: 15px;
+    justify-content: space-around;
+    width: 100%;
+  }
+  .horaExtraSelecionada input{
+    padding: 5px;
+    width: 300px;
+  }
+  
+ }
+
+ @media (max-width:750px) {
+   .horaExtraSelecionada{
+    left: 69%;
+    display: flex;
+  }
+  .horaExtraSelecionada h1{
+    font-size: 15pt;
+    margin-bottom: 15px;
+  }
+  .horaExtraSelecionada form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    gap: 10px;
+  }
+  .horaExtraSelecionada input{
+    width: 100%;
+  }
+  .horaExtraSelecionada{
+    width: 50%;
+  }
+  .horaExtraSelecionada .container-form-btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+  .horaExtraSelecionada #btn{
+    width: 90px;
+  }
+ }
