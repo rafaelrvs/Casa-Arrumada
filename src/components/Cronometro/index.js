@@ -50,9 +50,7 @@ const Cronometro = () => {
     
   }
   function disablePage(event){
-    stopAction();
-    resetAction();
-    
+    window.location.reload();  
    event.preventDefault();
   }
   return (
