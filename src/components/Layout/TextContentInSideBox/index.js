@@ -2,7 +2,7 @@ import "./TextContentInSideBox.css"
 
 const TextContentInSideBox = () =>{
   return(
-    <div>
+    <div className="container-text">
       <p></p>
     </div>
   );

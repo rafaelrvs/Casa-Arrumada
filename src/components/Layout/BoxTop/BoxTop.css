@@ -33,15 +33,15 @@
     
   }
   .container__BoxTop .content{
-    width: 60%;
+   
     justify-content: space-around;
   }
 }
 @media(max-width:510px) {
   .container__BoxTop .content{
     font-size: 10pt;
-    width: 60%;
-    margin-right: 25px;
+    width: 50%;
+    margin-right: 10px;
   }
 }
 
@@ -54,5 +54,8 @@
 }
 .content div{
 text-align: center;
- width: 80px;
+
+}
+.content div{
+  width: 100px;
 }
