@@ -1,7 +1,19 @@
 .container_Exercicio_Laboral{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50% , 50%);
-  
+  position: fixed;
+  top: 30%;
+  left: 30%;
+  transform: translate(-50% 50%);
+  height: 60%;
+  width: 60%;
+  background-color: var(--menuOpitionSide);
+  z-index: 2;
+
+}
+.container_Exercicio_Laboral video{
+  width: 100%;
+  height: 100%;
+
+}
+.closePageContainer{
+  margin: 10px;
 }

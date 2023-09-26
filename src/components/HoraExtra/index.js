@@ -1,3 +1,4 @@
+import ClosePage from '../Layout/ClosePage'
 import './HoraExtra.css'
 import { useState } from 'react'
 class HoraExtraRegistradaParaPagamento{
@@ -99,6 +100,9 @@ sethoraExtra('')
       </div>
      <section>
       <form onSubmit={handleSubmit} action="">
+        <div className='closePageContainer'>
+      <ClosePage/>
+        </div>
       <h1>Hora Extra:  {resposta}</h1>
         <label htmlFor="percentageInput">Porcentagem:</label>
         <input

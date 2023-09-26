@@ -10,6 +10,7 @@ import DescimoTerceiro from "../../DecimoTerceiro";
 import Ferias from "../../Ferias";
 import HoraExtra from "../../HoraExtra";
 import SalarioMensal from "../../SalarioMensal";
+import ClosePage from "../ClosePage";
 
 const SideBoxLeft = () => {
 const [decimoAtivo,setDecimoAtivo] = useState(false);

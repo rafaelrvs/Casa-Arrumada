@@ -1,3 +1,4 @@
+import ClosePage from '../Layout/ClosePage'
 import './Ferias.css'
 import React,{useState} from 'react'
 class CalculoFerias {
@@ -79,6 +80,9 @@ const Ferias = () =>{
     <div className='vacation'>
       <section>
         <form onSubmit={toSendValue} action="">
+          <div className='closePageContainer'>
+            <ClosePage/>
+          </div>
           <h1>Calculo de ferias: <br/>{pagamento}</h1>
           <label htmlFor="entradaDoSalario">Salario Bruto</label>
 

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Anotacao.css";
+import ClosePage from "../Layout/ClosePage";
 
 
 function Anotacao() {
@@ -45,14 +46,12 @@ function Anotacao() {
     newTasks[index].isComplete = !newTasks[index].isComplete;
     setTasks(newTasks);
   };
-  const handlerReload = (event)=>{
-    window.location.reload();
-    event.preventDefault();
-  }
   return (
     <div className="tarefas">
       <div className="container">
-        <img onClick={handlerReload} id="img" src="../img/xis.svg" alt="close page" />
+        <div className='closePageContainerAnotacao'>
+              <ClosePage/>
+        </div>
       <h1>Anotação</h1>
       <h2 id="contagem">{contPassWord}</h2>
       </div>

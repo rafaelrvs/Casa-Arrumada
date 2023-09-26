@@ -1,3 +1,4 @@
+import ClosePage from '../Layout/ClosePage'
 import './DecimoTerceiro.css'
 import { useState } from 'react'
 class DecimoTErceiroRegistrado{
@@ -49,6 +50,9 @@ const DescimoTerceiro = () =>{
     <div className="decimoTerceiroContainer">
       <section>
         <form onSubmit={ClickSendValue} action="">
+        <div className='closePageContainer'>
+            <ClosePage/>
+          </div>
           <h1>Décimo Terceiro  {valorDoDecimo}</h1>
           <label htmlFor="salario">Salario bruto</label>
           <input 

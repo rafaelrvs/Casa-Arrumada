@@ -20,6 +20,10 @@
   align-items: center;
 
 }
+.closePageContainerAnotacao{
+margin-left: 200px;
+}
+
 .tarefas-input{
   display:flex;
   width: 280px;

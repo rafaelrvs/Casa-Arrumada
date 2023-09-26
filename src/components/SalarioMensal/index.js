@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './SalarioMensal.css'
+import ClosePage from '../Layout/ClosePage';
 class WageMonth{
   constructor(wageForHours,workHours, dayToWorkTotal ){
     this._wageForHours = wageForHours;
@@ -53,6 +54,9 @@ return(
   <div className="containerSalarioMensal">
     <section>
       <form onSubmit={insertValueInSalario} action="">
+      <div className='closePageContainer'>
+            <ClosePage/>
+          </div>
       <h1>Salario mensal: {valueWage}</h1> 
         <label htmlFor="salarioPhora">Salario P/hora</label>
         <input id='salarioPhora' 
