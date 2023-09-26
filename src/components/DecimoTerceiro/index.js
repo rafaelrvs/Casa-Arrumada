@@ -1,6 +1,7 @@
 import ClosePage from '../Layout/ClosePage'
 import './DecimoTerceiro.css'
 import { useState } from 'react'
+
 class DecimoTErceiroRegistrado{
   constructor(salarioBrutoInserido, mesesInserido){
     this._meses = mesesInserido

@@ -4,6 +4,10 @@
   --boxContainer: rgb(237, 183, 4);
   --menuOpitionSide:rgb(48, 46, 37);
 }
+html{
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
 *{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
  margin: 0;
