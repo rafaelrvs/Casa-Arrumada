@@ -6,6 +6,7 @@
   height: 100vh;
   background-color: var(--menuOpitionSide);
   width: 50px;
+  gap: 50px;
   box-shadow: 1px 1px 5px black;
  position: absolute;
  transition: 0.5s;
@@ -27,6 +28,7 @@
   font-size: 10pt;
   flex-direction: column;  
   margin-right: 25px;
+
 }
 
 
@@ -63,8 +65,8 @@
     
   }
   .container-img{
-    height: 100px;
-    margin-bottom: 90px;
+    height: 90px;
+
   }
   .textContent{
     display: flex;
@@ -73,6 +75,7 @@
     align-items: center;
     width: 90%;
     margin: 10px;
+
  }
 
 }
