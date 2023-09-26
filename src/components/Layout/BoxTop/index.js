@@ -26,7 +26,8 @@ const BoxTop = () => {
     setExercicio(false);
     event.preventDefault();
   };
-  const ExercicioAtivo = (event) => {
+  const exercicioAtivo = (event) => {
+    console.log(exercicio)
     setExercicio(true);
     setCronometro(false);
     setAnotation(false);
@@ -43,14 +44,15 @@ const BoxTop = () => {
           <TextContentInSideBox /> Anotação
         </div>
        
-        <div onClick={ExercicioAtivo}>
+        <div onClick={exercicioAtivo}>
           <TextContentInSideBox /> Exercicio laboral
         </div>
+        
       </div>
       <div>
         {cronometro && <Cronometro />}
         {anotation && <Anotacao />}
-        {exercicio&&<ExercicioLaboral/>}
+        {exercicio &&<ExercicioLaboral/>}
       </div>
     </div>
   );

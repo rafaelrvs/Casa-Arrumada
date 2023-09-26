@@ -3,9 +3,9 @@ import "./ExercicioLaboral.css";
 const ExercicioLaboral = () =>{
   return(
     <div className="container_Exercicio_Laboral" >
-     <div className="container-img-exerciciolaboral">
-      <img src="public\img\exercicio.mp4" alt="" />
-     </div>
+     <video width={640} height={360} className="container-img-exerciciolaboral" controls>
+      <source src="./img/exercicio.mp4" alt="" type="video/mp4"/>
+     </video>
     </div>
   );
 }
