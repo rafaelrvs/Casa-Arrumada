@@ -36,9 +36,11 @@ const BoxTop = () => {
 
   return (
     <div className="container__BoxTop">
+      <p   className="continue">Menu</p>
       <div className="content">
         <div onClick={activePage}>
           <TextContentInSideBox /> Cronometro
+        
         </div>
         <div onClick={handlerOpenNotation}>
           <TextContentInSideBox /> Anotação

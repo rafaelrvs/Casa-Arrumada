@@ -50,6 +50,9 @@
   transition: 0.5s;
   cursor: pointer;
   color: black;
+  .continue{
+    display: none;
+  }
   
 }
 .content div{
@@ -58,4 +61,26 @@ text-align: center;
 }
 .content div{
   width: 100px;
+}
+
+
+.container__BoxTop .continue{
+  display: flex;
+  position: fixed;
+  color: var(--menuOpitionSide);
+  animation: infinite linear 1500ms identifier;
+}
+
+
+@keyframes identifier {
+  0%{
+    scale:1;
+  }
+  50%{
+    scale:1.2;
+  }
+  100%{
+    
+    scale:1;
+  }
 }

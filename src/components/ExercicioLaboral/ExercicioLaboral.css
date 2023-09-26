@@ -7,10 +7,13 @@
   width: 60%;
   background-color: var(--menuOpitionSide);
   z-index: 2;
+  border-radius: 25px 25px 0 0;
 
+  
 }
 .container_Exercicio_Laboral video{
   width: 100%;
+  border-radius: 25px;
   height: 100%;
 
 }
