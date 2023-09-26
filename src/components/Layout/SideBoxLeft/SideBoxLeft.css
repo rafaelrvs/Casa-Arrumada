@@ -1,7 +1,7 @@
 .container__box__left{
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   flex-direction: column;
   height: 100vh;
   background-color: var(--menuOpitionSide);
@@ -15,6 +15,7 @@
 /*Variavel global Logo*/
 .container-img{
   display: none;
+  margin: 25px;
 }
 .menuMais__Logo{
   display: flex;
@@ -49,7 +50,7 @@
   }
   .container_menuEmpresa_logo{
     display: flex;
-    height: 100vh;
+  
   }
   .container-img{
     display: flex;
