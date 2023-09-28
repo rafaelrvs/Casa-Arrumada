@@ -1,7 +1,7 @@
 .container__box__left{
   display: flex;
   justify-content: center;
-  align-items: start;
+  align-items: center;
   flex-direction: column;
   height: 100vh;
   background-color: var(--menuOpitionSide);
@@ -60,22 +60,26 @@
 }
 @media (max-width:450px) {
   .container__box__left:hover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 130px;
     font-size: 7pt;
     text-align: center;
-    
+    gap: 140px;
   }
   .container-img{
-    height: 90px;
+    height: 60px;
+
 
   }
   .textContent{
     display: flex;
     font-size: 9pt;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
-    width: 90%;
-    margin: 10px;
+    width: 80%;
+
 
  }
 
