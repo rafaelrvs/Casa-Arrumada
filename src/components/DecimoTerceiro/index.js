@@ -65,7 +65,7 @@ const DescimoTerceiro = () =>{
            onChange={handleInputChangeSalario}
            />
 
-          <label htmlFor="totalMeses" >Quantidade de meses Trabalhado</label>
+          <label htmlFor="totalMeses" >Meses Trabalhado</label>
           <input type="Number"
           id='totalMeses'
           step='any' 
