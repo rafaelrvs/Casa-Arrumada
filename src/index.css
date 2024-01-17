@@ -11,19 +11,9 @@
   box-sizing: border-box;
   text-decoration: none;
   color: black;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   
 }
 body{
   background-color: rgb(48, 36, 36);
 }
-#img{
-  display: flex;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%,-50%);
-  height: 500px;
-  opacity: 20%;
-}
-

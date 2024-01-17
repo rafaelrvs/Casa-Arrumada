@@ -13,9 +13,7 @@ function App() {
     <>
     <BrowserRouter>
       <Header/>
-      <nav>
-        <img  id='img' src="./public/casaArrumada.png" alt="" />
-      </nav>
+     
       <Routes>
         <Route path="" element={<Home/>}/>
         <Route path="Produtos" element={<Produtos/>}/>

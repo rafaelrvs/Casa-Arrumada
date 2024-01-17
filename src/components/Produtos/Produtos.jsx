@@ -1,8 +1,15 @@
-const Produtos = () =>{
-    return(
-        <div>
+import { useState, useEffect } from "react"
 
-        </div>
+import "./Produto.css"
+
+const Produtos = () =>{
+
+    return(
+        <div className="container-product">
+
+         
+                    
+      </div>
     )
 }
 export default Produtos

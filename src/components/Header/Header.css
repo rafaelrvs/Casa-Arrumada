@@ -1,8 +1,9 @@
 .container-center{
+    position: fixed;
     width: 100vw;
     background-color: var(--background);
     
-
+    
 }
 
 

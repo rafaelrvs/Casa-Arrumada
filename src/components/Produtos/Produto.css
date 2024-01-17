@@ -1,10 +1,4 @@
-.container-home{
-    background-color: rgb(48, 36, 36);
-    overflow: hidden;
-}
-
-
-.container-home{
+.container-product{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,13 +6,12 @@
     
     
 }
-.container-home h1{
-    position: relative;
-
+.container-product p{
+    color: #fff;
     text-align: center;
     font-size: 20pt;
     margin: 25px;
-
+    background-color: rgba(0, 0, 0, 0.534);
     width: 100vw ;
-    border: 2px solid ;;
+
 }
