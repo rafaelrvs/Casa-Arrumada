@@ -1,30 +1,29 @@
 :root{
-  --corFonte: rgb(249, 221, 10);
-  --background: rgb(109, 23, 3) ;;
-  --boxContainer: rgb(237, 183, 4);
-  --menuOpitionSide:rgb(48, 46, 37);
-}
-html{
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  --background: rgb(252, 187, 8) ;
+
 }
 
+
+
 *{
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
- margin: 0;
- padding: 0;
- box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: black;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  
 }
 body{
+  background-color: rgb(48, 36, 36);
+}
+#img{
   display: flex;
-  justify-content: start;
-  align-items: center;
-  background-color:var(--planoDeFundo);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  height: 500px;
+  opacity: 20%;
 }
-p:hover{
- scale:1.1;
- transition: 0.5s;
- cursor: pointer;
-}
-label{
-  text-align: start;
- }
+
