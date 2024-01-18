@@ -2,8 +2,7 @@
     position: fixed;
     width: 100vw;
     background-color: var(--background);
-    
-    
+    z-index: 99999;    
 }
 
 
@@ -11,7 +10,7 @@
     display: flex;
     width: 1000px;
     margin: 0 auto;
-    height: 50px;
+    height: 65px;
     justify-content: space-between;
     align-items: center;
     
@@ -24,6 +23,11 @@
 }
 .active{
     text-decoration: none;
+}
+#img-logo{
+position: absolute;
+left: 0;
+margin-left: 50px;
 }
 
 .item{
@@ -103,4 +107,10 @@ position: absolute;
 left: 0;
 margin-left: 25px;
 height: 40px;
+}
+@media(max-width:1350px) {
+    #img-logo{
+        display: none;
+    }
+    
 }

@@ -15,7 +15,7 @@ const Header = () => {
         <header className="container-center">
             <div className="container-header">
 
-              
+              <img id="img-logo" src="./public/img/logo.jpg" alt="logo" />
                 <nav className="content-header" >
                     <NavLink className='item' to="/" onClick={ativaLogo}>Home</NavLink>
                     <NavLink className='item' to="Produtos" onClick={disableLogo}>Produtos</NavLink>
@@ -25,8 +25,7 @@ const Header = () => {
                 
                 </nav>
                 <nav className="content-header teste">
-                    <NavLink className='item' to="Login">Login</NavLink>
-                    <NavLink className='item cadastro'  to="Cadastro">Cadastro</NavLink>
+                    <NavLink className='item cadastro'  to="Cadastro">Faça um orçamento</NavLink>
                 </nav>
             </div>
         </header>

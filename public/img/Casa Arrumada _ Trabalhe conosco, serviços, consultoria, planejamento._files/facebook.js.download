@@ -1,0 +1,72 @@
+var FacebookMgr=new function(){var e=this;
+var b="";
+var d="";
+var c=null;
+this._user;
+this.init=function(g,h,f){f=f||"en_US";
+window.fbAsyncInit=function(){FB.init({appId:g,version:"v9.0",status:true,cookie:true,xfbml:true});
+h();
+FB.getLoginStatus(function(i){b=i.status;
+if(typeof h!="undefined"){h(b)
+}})
+};
+(function(l){var k,m="facebook-jssdk";
+var i=l.getElementById(m);
+if(i){i.parentNode.removeChild(i)
+}k=l.createElement("script");
+k.id=m;
+k.async=true;
+k.src="//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId="+g;
+var j=l.getElementsByTagName("script")[0];
+j.parentNode.insertBefore(k,j)
+}(document))
+};
+this.connect=function(g){function f(h){b=h.status;
+if(h.status!="connected"){return g({status:false})
+}var i={user_id:h.authResponse.userID,access_token:h.authResponse.accessToken};
+g(i)
+}FB.login(f,{scope:"email,manage_pages"})
+};
+this.connected=function(){return b=="connected"
+};
+this.disconnect=function(f){FB.logout(function(g){b="";
+d="";
+if(typeof f!="undefined"){f()
+}})
+};
+this.username=function(){return d
+};
+this.openSendDialog=function(f,g){FB.ui({method:"send",display:"iframe",link:f.link},function(i){var h=(i!=null)&&i.success;
+if(typeof g!="undefined"){g(h)
+}})
+};
+function a(f,n){var j=f.data;
+var g=[];
+for(var h in j){var m=j[h];
+var l=m.message;
+if(typeof l=="undefined"){continue
+}var k=l.split(" ");
+m.message=k.map(Inffuse.utils.addbreaks).join(" ");
+g.push({id:m.id,date:(new Date(m.created_time.replace("+0000",""))).getTime(),source:"facebook",text:l,link:"https://www.facebook.com/"+m.id,author_image:"https://graph.facebook.com/"+m.from.id+"/picture?width=100&height=100",author_name:m.from.name,author_link:"https://www.facebook.com/"+m.from.id})
+}c=f.paging?f.paging.next:null;
+n(g)
+}this.getPagePosts=function(f,g){c=null;
+FB.api("/"+f.id+"/feed",{access_token:f.access_token,limit:30},function(h){a(h,g)
+})
+};
+this.getPageNext=function(f){if(!c){f([]);
+return
+}FB.api(c,function(g){a(g,f)
+})
+};
+this.user=function(f){FB.api("/me",function(g){e._user=g;
+f(g)
+})
+};
+this.getPages=function(f){FB.api("/me/accounts",function(g){f(g.data)
+})
+};
+this.checkPageLike=function(f,g){FB.api("/me/likes/"+f,function(h){g(h.data.length>0)
+})
+}
+};

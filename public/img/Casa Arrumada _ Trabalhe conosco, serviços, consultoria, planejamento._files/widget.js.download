@@ -1,0 +1,311 @@
+var Cookies=new function(){this.get=function(a){if(typeof localStorage!="undefined"){return localStorage[a]
+}return decodeURIComponent(document.cookie.replace(new RegExp("(?:(?:^|.*;)\\s*"+encodeURIComponent(a).replace(/[\-\.\+\*]/g,"\\$&")+"\\s*\\=\\s*([^;]*).*$)|^.*$"),"$1"))||null
+};
+this.set=function(d,g,c,b,a,e){if(typeof localStorage!="undefined"){localStorage[d]=g;
+return true
+}if(!d||/^(?:expires|max\-age|path|domain|secure)$/i.test(d)){return false
+}var f="";
+if(c){switch(c.constructor){case Number:f=c===Infinity?"; expires=Fri, 31 Dec 9999 23:59:59 GMT":"; max-age="+c;
+break;
+case String:f="; expires="+c;
+break;
+case Date:f="; expires="+c.toUTCString();
+break
+}}document.cookie=encodeURIComponent(d)+"="+encodeURIComponent(g)+f+(a?"; domain="+a:"")+(b?"; path="+b:"")+(e?"; secure":"");
+return true
+};
+this.remove=function(c,b,a){if(typeof localStorage!="undefined"){delete localStorage[c];
+return true
+}if(!c||!this.hasItem(c)){return false
+}document.cookie=encodeURIComponent(c)+"=; expires=Thu, 01 Jan 1970 00:00:00 GMT"+(a?"; domain="+a:"")+(b?"; path="+b:"");
+return true
+};
+this.exists=function(a){if(typeof localStorage!="undefined"){return(typeof localStorage[a]!="undefined")
+}return(new RegExp("(?:^|;\\s*)"+encodeURIComponent(a).replace(/[\-\.\+\*]/g,"\\$&")+"\\s*\\=")).test(document.cookie)
+};
+this.keys=function(){var a=document.cookie.replace(/((?:^|\s*;)[^\=]+)(?=;|$)|^\s*|\s*(?:\=[^;]*)?(?:\1|$)/g,"").split(/\s*(?:\=[^;]*)?;\s*/);
+for(var b=0;
+b<a.length;
+b++){a[b]=decodeURIComponent(a[b])
+}return a
+}
+};
+function updateWidgetSize(){if(typeof Wix=="undefined"){return
+}var c=$(".inffuse-container");
+var f=c.outerWidth();
+var b=c.outerHeight();
+var e=c.css("margin-right");
+if(e){e=1*e.replace("px","")
+}e+=5;
+var d=f+e;
+var a=b+e;
+switch(Inffuse.platform){case"wix":Wix.resizeWindow(d,a);
+break;
+default:Inffuse.project.resize({width:d,height:a});
+break
+}}function onFullScreen(b){if(Inffuse.platform!="wix"){return b()
+}function a(){Wix.getBoundingRectAndOffsets(function(c){if(c.rect.left<=1&&c.rect.top<=1){return b()
+}setTimeout(a,100)
+})
+}a()
+}function setFullScreen(){if(typeof Wix=="undefined"){return
+}if(Inffuse.platform=="wix"){Wix.getBoundingRectAndOffsets(function(c){var b=c.rect.right||$(window).width();
+var a=c.rect.bottom||$(window).height();
+Wix.resizeWindow(b,a)
+})
+}else{}}function timeToOpen(e){if(Inffuse.platform=="tictail"){return true
+}var d="fbpopup:"+Inffuse.project.id();
+var c=(new Date()).getTime();
+function b(){switch(e){case"always":return true;
+case"once":return !Cookies.exists(d);
+case"weekly":var g=Cookies.get(d);
+var f=7*24*60*60*1000;
+if(!g||c-g>f){Cookies.set(d,c);
+return true
+}break
+}return false
+}var a=b();
+if(a){Cookies.set(d,c)
+}return a
+}var main_scope;
+function AppController(a,b,c){main_scope=a;
+a.settings=null;
+a.rendered_colors;
+a.visible=false;
+a.fbpage;
+a.app_link="http://links.inlightlabs.com/fbpopup";
+a.platform;
+document.addEventListener("keyup",function(d){if(!d.ctrlKey&&!d.altKey){switch(d.keyCode){case 27:a.close(null,true);
+a.$apply();
+break;
+case 9:$("body").addClass("accessible");
+break
+}}},false);
+document.addEventListener("mousedown",function(d){$("body").removeClass("accessible")
+},false);
+a.setSettings=function(d,e){a.settings=d;
+a.settings.title=a.settings.title.substr(0,60).replace(/\n/g,"<br>");
+a.settings.subtitle=a.settings.subtitle.substr(0,130).replace(/\n/g,"<br>");
+if(!e&&Inffuse.user.free()&&a.settings.template.id!=1&&a.settings.template.id!=8){a.settings.template.id="1"
+}};
+a.init=function(){a.initialized=true;
+a.platform=Inffuse.platform;
+if(Inffuse.viewMode()!="editor"){setTimeout(function(){setFullScreen()
+},(a.settings.delay||0)*1000)
+}c.use(a.settings.language);
+a.initFacebook();
+a.initFbPage(a.settings.fbpage);
+a.$watch("settings.fbpage",function(e,d){if(typeof e=="undefined"&&typeof d=="undefined"){return
+}if(e&&d&&e.id==d.id){return
+}a.refreshTemplate();
+a.initFbPage(a.settings.fbpage)
+},true);
+a.$watch("settings.large_button",function(e,d){if(typeof e=="undefined"&&typeof d=="undefined"){return
+}if(e&&d&&e.id==d.id){return
+}a.refreshTemplate();
+a.initFbPage(a.settings.fbpage)
+},true);
+a.$watch("settings.locale",function(e,d){if(typeof e=="undefined"&&typeof d=="undefined"){return
+}if(e&&d&&e==d){return
+}a.refreshTemplate();
+a.initFbPage(a.settings.fbpage)
+},true);
+if(!a.$$phase){a.$apply()
+}if(Inffuse.viewMode()=="editor"){setTimeout(updateWidgetSize,500)
+}};
+a.close=function(d,e){if(!e&&!$(d.target).hasClass("close-target")){return
+}a.visible=false;
+a.fadeOut=true;
+setTimeout(function(){a.fadeOut=false;
+a.$apply();
+switch(Inffuse.platform){case"wix":Wix.resizeWindow(1,1);
+break;
+case"web":case"tictail":var f={app:"fbpopup",id:Inffuse.project.id(),type:"close"};
+window.parent.postMessage(f,"*");
+break
+}},1000)
+};
+a.shuffle=function(g){var d=g.length;
+while(d>0){var f=Math.floor(Math.random()*d);
+d--;
+var e=g[d];
+g[d]=g[f];
+g[f]=e
+}};
+a.initFbPage=function(g){var e=[];
+for(var f=0;
+f<10;
+f++){e.push({image:"/img/profile_male.jpg"});
+e.push({image:"/img/profile_female.jpg"})
+}a.shuffle(e);
+a.fbpage=a.clone(g)||{};
+var h={wix:"likepopupapp",web:"likepopupapp",tictail:"likepopupapp",custom:"likepopupapp"}[Inffuse.platform];
+a.fbpage.id=a.fbpage.id||h;
+a.fbpage.id=a.fbpage.id.replace(/https?\:\/\/www\.facebook\.com\//i,"");
+a.fbpage.id=a.fbpage.id.replace("/","");
+if(a.fbpage.name){Inffuse.services.facebook.page(a.fbpage.id).success(function(j){var i=j.page;
+a.fbpage.users=i.users||[];
+if(a.fbpage.users.length<20){a.fbpage.users=a.fbpage.users.concat(e)
+}a.fbpage.profile=i.picture.data.url;
+a.fbpage.fan_count=i.fan_count;
+a.fbpage.direction=i.direction;
+a.fbpage.name=i.name;
+a.fbpage.cover=i.cover.source;
+a.fbpage.prompt=a.fbpage.fan_count.toLocaleString()+" likes";
+a.$apply()
+})
+}else{var d=a.settings.locale||"en_US";
+Inffuse.services.facebook.likes(a.fbpage.id,20,d).success(function(i){a.fbpage.users=i.users;
+if(a.fbpage.users.length<20){a.fbpage.users=a.fbpage.users.concat(e)
+}a.fbpage.profile=i.thumbnail;
+a.fbpage.prompt=i.prompt;
+a.fbpage.direction=i.direction;
+a.fbpage.name=i.name||$("<div>"+i.prompt+"</div>").find("a").text();
+a.fbpage.cover=i.cover;
+a.$apply()
+})
+}setTimeout(a.initFacebook,0)
+};
+a.viewChanged=function(){a.$apply(function(){a.visible=false
+});
+function d(){a._timer=setTimeout(function(){setFullScreen();
+onFullScreen(function(){a.visible=true;
+if(!a.$$phase){a.$apply()
+}})
+},(a.settings.delay||0)*1000);
+a._openedInPreview=true
+}if(Inffuse.viewMode()=="editor"){if(a._timer){clearTimeout(a._timer);
+a._timer=null
+}updateWidgetSize();
+b(function(){a.visible=true
+});
+a._openedInPreview=false
+}else{if(a.settings.nopreview||a._openedInPreview){return
+}if(a.settings.sitePage=="inffuse:all"){d()
+}else{Wix.getCurrentPageId(function(e){if(a.settings.sitePage==e){d()
+}})
+}}};
+a.initFacebook=function(){var d=a.settings.locale||"en_US";
+FacebookMgr.init("639530319449893",function(e){if(FacebookMgr.connected()==false){return
+}FacebookMgr.user(function(){FacebookMgr.checkPageLike(a.fbpage.id,function(f){console.log("liked",f)
+})
+})
+},d)
+};
+a.clone=function(d){if(typeof d=="undefined"){return d
+}return JSON.parse(JSON.stringify(d))
+};
+a.getTemplate=function(){var d=a.settings.template;
+var e=d.id;
+if(Inffuse.viewMode()=="editor"&&a.settings.minimize){e="editor_button"
+}return["templates/",e,".html","?cache=",d.random].join("")
+};
+a.refreshTemplate=function(){$("#facebook-jssdk, #fb-root, .fb-share-button").remove();
+delete FB;
+a.settings.template.random=Math.random()
+};
+a.onTemplateLoaded=function(){if(typeof FB!="undefined"){FB.init({appId:"511596618861481",version:"v2.8",status:true,cookie:true,xfbml:true});
+FB.Event.subscribe("edge.create",function(d){})
+}if(Inffuse.viewMode()=="editor"){setTimeout(updateWidgetSize,0);
+setTimeout(updateWidgetSize,500);
+a.visible=true
+}else{onFullScreen(function(){$("#close").focus();
+a.visible=a.settings.disabled?a.visible:true;
+if(!a.$$phase){a.$apply()
+}})
+}};
+a.getLikeUrl=function(d){var f={href:"https://www.facebook.com/"+a.fbpage.id,layout:d?"button":"standard",show_faces:false,share:false,height:20,width:50,locale:"ru_RU"};
+var e="https://www.facebook.com/plugins/like.php?"+$.param(f);
+return e
+};
+a.getProfileImage=function(d){if(typeof d=="undefined"){d="normal"
+}return"https://graph.facebook.com/"+a.fbpage.id+"/picture?type="+d
+};
+a.isOpen=function(){var d=Inffuse.viewMode()!="editor";
+return d
+};
+a.onSizeChanged=function(){if(a.isOpen()){return
+}};
+a.reportHeightChange=function(){setTimeout(function(){Inffuse.project.updateHeight()
+},100)
+};
+a.showPromotion=function(){return a.settings.template.id==1||a.settings.template.id==8
+};
+a.promotionClicked=function(){Inffuse.site.meta(function(d){InffuseAnalytics.init();
+InffuseAnalytics.track("Promotion Clicked",{Source:d.url,Mode:Inffuse.viewMode()})
+})
+}
+}if(typeof Wix!="undefined"){Wix.resizeWindow(1,1)
+}angular.module("App",["pascalprecht.translate","ngSanitize"]).controller("AppController",["$scope","$timeout","$translate",AppController]).config(["$interpolateProvider",function(a){a.startSymbol("[[");
+a.endSymbol("]]")
+}]).config(["$sceDelegateProvider",function(a){a.resourceUrlWhitelist(["**"])
+}]).config(["$translateProvider",function(a){a.translations("en",{people_like:"people like",be_first:"Be the first to like",editor_button:"Facebook Like Popup"})
+}]).filter("unsafe",["$sce",function(a){return function(b){return a.trustAsHtml(b)
+}
+}]).filter("customPageName",[function(){return function(c,b){if(!c){return c
+}var a=$("<div>"+c+"</div>");
+if(b){a.find("a").text(b)
+}return a.html()
+}
+}]).run(["$templateCache","$http",function(a,b){}]);
+var app_id="fbpopup";
+var server="//platform.inffuse.com";
+var inffuseSDK=new InffuseSDK_01(jQuery.ajax,app_id);
+inffuseSDK.server=server;
+inffuseSDK.init(function(a){window.Inffuse=a;
+angular.element(document).ready(function(){angular.bootstrap(document,["App"]);
+if(a.viewMode()=="editor"){InffuseAnalytics.init(a.user.id(),a.user.isNew())
+}if(a.user.isNew()||a.project.isNew()){if(a.user.isNew()){InffuseAnalytics.track("User created")
+}if(a.project.isNew()){InffuseAnalytics.track("App added")
+}}var c={title:"Like us on Facebook",subtitle:"It's the best way to stay in touch!",template:{id:"1"},sitePage:"inffuse:all",frequency:"always",language:"en",promotion:true};
+var d=a.project.get("settings",c);
+main_scope.setSettings(d);
+if(a.viewMode()=="editor"){main_scope.init();
+Wix.addEventListener(Wix.Events.PAGE_NAVIGATION,function(f){if(a.viewMode()=="preview"){main_scope.viewChanged()
+}Wix.getBoundingRectAndOffsets(function(g){if(g.rect.width<=5&&g.rect.height<=5){updateWidgetSize()
+}})
+})
+}else{if(!d.disabled){if(d.sitePage=="inffuse:all"){if(timeToOpen(d.frequency)){main_scope.init()
+}}else{var e=false;
+function b(f){if(e){return
+}if(f!=d.sitePage){return
+}if(timeToOpen(d.frequency)){main_scope.init()
+}e=true
+}if(typeof Wix!="undefined"){Wix.addEventListener(Wix.Events.PAGE_NAVIGATION,function(f){b(f.toPage)
+});
+Wix.getCurrentPageId(b)
+}}}}a.ui.init();
+$("body").resize(main_scope.onSizeChanged);
+a.on("view-mode-changed",main_scope.viewChanged);
+a.on("project-deleted",InffuseAnalytics.trackHandler("App deleted"));
+a.on("data-changed",function(){main_scope.setSettings(a.project.get("settings"));
+main_scope.$apply();
+setTimeout(updateWidgetSize,0);
+setTimeout(updateWidgetSize,500)
+});
+a.on("template-preview",function(g){var f=JSON.parse(JSON.stringify(a.project.get("settings",c)));
+f.template=g;
+main_scope.setSettings(f,true);
+main_scope.$apply()
+});
+a.on("template-preview-end",function(f){main_scope.setSettings(a.project.get("settings",c));
+main_scope.$apply()
+});
+a.on("inffuse-app-api",function(f){switch(f.command){case"show":main_scope.init();
+main_scope.settings.template.id=f.args.template;
+main_scope.$apply();
+setTimeout(function(){main_scope.visible=true;
+main_scope.$apply()
+},500);
+break
+}})
+});
+ga("create","UA-39145762-3","auto");
+ga("set","dimension1",a.user.id());
+ga("set","dimension2",a.site.id());
+ga("set","dimension3",a.project.id());
+ga("set","dimension4",a.user.plan());
+ga("set","dimension5",a.project.get("settings",{}).viewType);
+ga("set","dimension6",a.platform);
+ga("send","pageview")
+});
