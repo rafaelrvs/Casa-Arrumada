@@ -3,6 +3,7 @@
     width: 100vw;
     background-color: var(--background);
     z-index: 99999;    
+    padding: 15px;
 }
 
 

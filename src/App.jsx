@@ -5,6 +5,7 @@ import Produtos from './components/Produtos/Produtos'
 import Contato from './components/Contato/Contato'
 import Pagina404 from './components/Pagina404/Pagina404'
 import Header from './components/Header/Header'
+import Servico from './components/Servicos/Servico'
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
         <Route path="" element={<Home/>}/>
         <Route path="Produtos" element={<Produtos/>}/>
         <Route path="Contatos" element={<Contato/>}/>
+        <Route path="Servico" element={<Servico/>}/>
         <Route path="*" element={<Pagina404/>}/>
       </Routes>
 
