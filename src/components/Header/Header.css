@@ -1,117 +1,48 @@
-.container-center{
-    position: fixed;
-    width: 100vw;
-    background-color: var(--background);
-    z-index: 99999;    
-    padding: 15px;
-}
-
-
-.container-header{
-    display: flex;
-    width: 1000px;
-    margin: 0 auto;
-    height: 65px;
-    justify-content: space-between;
-    align-items: center;
-    
-}
 .content-header{
     display: flex;
-    gap: 20px;
-    
-
-}
-.active{
-    text-decoration: none;
-}
-#img-logo{
-position: absolute;
-left: 0;
-margin-left: 50px;
-}
-
-.item{
-    padding: 5px ;
-    position: relative;
-   
-}
-
-.item::after{
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 3px;
-    width: 0%;
-    background: black;
-}
-
-.item:hover::after{
-    margin-left: 5px;
-    animation: btnNav 500ms ease forwards;
-}
-
-@keyframes btnNav {
-    from{
-        width: 0%;
-    }
-    to{
-        width: 90%;
-    }
-
+    flex-wrap: wrap;
+    background-color:var(--background);
+    align-items: center;
+    width: 100vw;
     
 }
+.content-head{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+    align-items: center;
+    margin: 0 auto;
+    width: 1000px;
+    background-color:var(--background);
+    gap: 10px;
 
-
-
-.cadastro{
-     display: flex;
-     background-color:rgb(190, 49, 13);
-     border-radius: 5px;
-     color: #fff; 
-     box-shadow: 1px 1px 5px black;
 }
 
-.cadastro:hover {
-    background-color: rgb(73, 110, 27);
-   
+.content-head .item{
+    color: black;
+    font-weight: 500;
+
+    padding: 10px 5px;
+ 
+}
+.content-head .item-Faca-orcamento{
+    background-color: brown;
+    padding: 10px 25px;
+    border-radius: 5px;
+    color: #fff;
+ 
 }
 
-@media(max-width:1000px){
-    .container-header{
-        width: 500px;
+@media (max-width:740px) {
+    .content-head{
+        font-size: 10pt;
+        
     }
-}
-
-@media(max-width:500px){
-    .container-header{
-        display: flex;
-        gap: 10px;
-        width: auto;
-        flex-wrap: wrap;
-        justify-content: center;
-        height: auto;
-        padding: 20px 0;
+    #logo{
+       height: 40px;
+     
     }
-
-    .content-header{
-        display: flex;
-        width:500px ;
-        justify-content: center;
-    }
-
-}
-
-#icon{
-position: absolute;
-left: 0;
-margin-left: 25px;
-height: 40px;
-}
-@media(max-width:1350px) {
-    #img-logo{
-        display: none;
-    }
+ 
     
 }

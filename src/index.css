@@ -1,20 +1,16 @@
 :root{
-  --background: rgb(252, 187, 8) ;
+  --background: rgb(209, 159, 20) ;
 
 }
 
 
 
 *{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  color: black;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  
-}
-body{
-  background-color: rgb(48, 36, 36);
+margin: 0;
+padding: 0;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+text-decoration: none;
+font-family: Georgia, 'Times New Roman', Times, serif;
 
 }
+

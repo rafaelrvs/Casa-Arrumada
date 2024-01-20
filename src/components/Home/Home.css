@@ -1,128 +1,108 @@
-.container-home{
-    background-color: rgb(48, 36, 36);
+
+.content-home{
+    display: flex;
+    margin: 0 auto;
+    height: 500PX;
+    width: 1000px;
+}
+.container-p{
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-.container-img{
-
-    position: absolute;
-    background-color: aliceblue;
-    left: 0;
-    top: 0;
-    display: flex;
-    align-items: center;
-    height: 700px;
+    background-image: url("./public/img/gestao-de-contratos-rtcount.jpg");
     width: 100vw;
-    background-image: url('public/gestao-de-contratos-rtcount.jpg');
+    height: 600px;
+    background-repeat: no-repeat;
     background-size: cover;
-    
-}
-.container-img h6{
-    font-size: 16pt;
-    font-weight: 400;
-    margin-left: 50px;
-    color: #fff;
-    text-shadow: 5px 5px 15px black;
-    margin-bottom: 20px;
-}
-.container-img h1{
-    font-weight: 500;
-    margin-left: 50px;
-    color: #fff;
-    text-shadow: 5px 5px 15px black;
-    margin-bottom: 20px;
-}
-
-.SaibaMaisBtn{
-    position: relative;
- 
-    box-shadow: 1px 1px 5px black;
-    border-radius: 5px;
-    padding: 5px;
-    margin-left: 50px;
-    background-color:rgb(190, 49, 13);
-    color: #fff;
-}
-
-
-.SaibaMaisBtn:hover{
-    border:0.5 green solid;
-}
-
-.container-footer-home{
-   position: relative;
-    top: 50%;
-   display: flex;
-   width: 100%;
-   justify-content: center;
-    align-items: center;
-    bottom: 0;
-    height: 200px;
+    background-position-y: center;
     flex-direction: column;
-    
-}
-.container-footer-home h2{
-
-    margin-top: 300px;
+   
+    font-size: 2rem;
     color: #fff;
+    gap: 25px;
+
+    text-shadow: 2px 2px 5px black;
 }
-.container-footer-home .carrocel-clientes{
+.container-p .item-saiba-mais{
+    padding:5px 15px;
+    color: #fff;
+    border-radius: 5px;
+    background-color: brown;
+    margin-left: 50px;
+}
+
+.container-p #text{
+    margin-left: 50px;
+}
+
+@media (max-width:1000px) {
+    .container-p{
+        background-position-x: center;
+        height: 300px;
+        font-size: 15pt;
+        
+    }
+    .container-p #text{
+        margin-left: 10px;
+    }
+    .container-p .item-saiba-mais{
+     
+        margin-left:10px;
+    }
     
+}
+
+@media (max-width:400px) {
+    .container-p{
+        background-position-x: center;
+        height: 300px;
+        font-size: 10pt;
+        
+    }
+    
+    .container-p .item-saiba-mais{
+        
+        font-size: 7pt;
+    
+    }
+    
+}
+
+.container-empresas-confiança {
     display: flex;
-    margin-top: 20px;
-    gap: 50px;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    padding: 20px;
+    font-size: 15pt;
 }
-.carrocel-clientes .carrocel-1, .carrocel-2,.carrocel-3{
-    height: 150px;
-    width: 150px;
-    display: flex;
-  
+@media (max-width:800px) {
+    
+.container-empresas-confiança {
+ 
+    font-size: 9pt;
 }
-
-
-.carrocel-1 img{
-    height: 100%;
-
-}
-.carrocel-2 img{
-    width: 100%;
-    height: 100%;
-}
-.carrocel-3 img{
-    width: 100%;
-    height: 100%;
-}
-.rodaPe{
-
-    bottom:0 ;
-    left: 0;
-    height: 200px;
-    background-color: rgba(6, 5, 5, 0.361);
-    width: 100vw;
-    z-index: 2;
-}
-
-@media (max-width:1040px) {
-    .carrocel-clientes .carrocel-1, .carrocel-2,.carrocel-3{
-        height: 100px;
-        width: 100px;
-
-    }
-}
-@media (max-width:700px) {
-    .carrocel-clientes .carrocel-1, .carrocel-2,.carrocel-3{
-        height: 100px;
-        width: 100px;
-        overflow: hidden;
-    }
-    .container-home h2{
-   
-        margin-bottom: 5px;
-    }
     
 }
+
+.container-empresas-img{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    }
+    .container-img{
+        height: 150px;
+        overflow: hidden;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container-img #img-2,#img-3 {
+  
+    height: 100px;
+
+    }
+    .container-img #img-1{
+        height: 90px;
+    }
+

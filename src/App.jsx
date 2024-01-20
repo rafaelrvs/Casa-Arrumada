@@ -5,7 +5,7 @@ import Produtos from './components/Produtos/Produtos'
 import Contato from './components/Contato/Contato'
 import Pagina404 from './components/Pagina404/Pagina404'
 import Header from './components/Header/Header'
-import Servico from './components/Servicos/Servico'
+import Servicos from './components/Servicos/Servicos'
 
 function App() {
 
@@ -14,13 +14,13 @@ function App() {
     <>
     <BrowserRouter>
       <Header/>
-     
       <Routes>
         <Route path="" element={<Home/>}/>
         <Route path="Produtos" element={<Produtos/>}/>
         <Route path="Contatos" element={<Contato/>}/>
-        <Route path="Servico" element={<Servico/>}/>
+        <Route path="Servicos" element={<Servicos/>}/>
         <Route path="*" element={<Pagina404/>}/>
+    
       </Routes>
 
     </BrowserRouter>

@@ -1,45 +1,67 @@
+
+
 import { NavLink } from "react-router-dom"
 import "./Home.css"
-
-
-const Home = () =>{
+const Home = () => {
 
 
 
-    return(
+    return (
         <div className="container-home">
-           <div className="container-img">
-            <div>
-                <h6>Serviços</h6>
-                <h1>Manutenção predial, Residencial, Comercio e Condominio</h1>
-                <NavLink className="SaibaMaisBtn" to="Saiba mais">Saiba mais</NavLink>
+
+
+            <div className="container-p">
+
+                <p id="text">Somos especialista  em manutenção predial e Residencial</p>
+
+                <div >
+                    <NavLink className="item-saiba-mais" to="saiba-mais" >Saiba mais</NavLink>
+
+                </div>
+
+            </div>
+            <div className="container-empresas-confiança">
+                <br />
+                <p>Empresas que confiam no nosso serviço: </p>
+
+            </div>
+
+
+            <div className="container-empresas-img">
+                <div className="container-img-main">
+
+
+
+                </div>
+
+                <div className="container-img">
+                    <img id="img-3" src="./public/img/download.png" alt="sancet" />
+                </div>
+                <div className="container-img">
+                    <img id="img-2" src="./public/img/associação.png" alt="associação" />
+                </div>
+                <div className="container-img">
+                    <img id="img-1" src="./public/img/aruan.png" alt="aruan" />
+                </div>
+
+
             </div>
 
 
 
-           </div>
-            <footer className="container-footer-home" >
 
-                <h2>Empresas que confiaram no nosso serviço: </h2>
-                <div className="carrocel-clientes">
-                    <div className="carrocel-1"><img src="public/download.png" alt="sancet" /></div>
-                    <div className="carrocel-2"><img src="public/associação.png" alt="associação" /></div>
-                    <div className="carrocel-3"><img src="public/aruan.png" alt="aruan" /></div>
+            <div>
 
-                <div className="rodaPe" >
-
-                    <div className="footer">
-                            <div></div>
-                    </div>
-                </div>
-                </div>
-
-            </footer>
+            </div>
 
 
 
 
         </div>
+
+
+
+
     )
 }
 export default Home
