@@ -8,7 +8,7 @@
 .container-p{
     display: flex;
     justify-content: center;
-    background-image: url("./public/img/gestao-de-contratos-rtcount.jpg");
+    background-image: url("./public/gestao-de-contratos-rtcount.jpg");
     width: 100vw;
     height: 600px;
     background-repeat: no-repeat;
@@ -88,14 +88,14 @@
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
+    gap: 15px;
     }
     .container-img{
         height: 150px;
         overflow: hidden;
-        
         display: flex;
         justify-content: center;
-        align-items: center;
+       
     }
     .container-img #img-2,#img-3 {
   

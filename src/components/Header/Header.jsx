@@ -9,7 +9,7 @@ const Header = () => {
                 <div className="content-head">
 
 
-                <img src="public/img/logo.jpg" alt="logo" id="logo" />
+                <img src="public/logo.jpg" alt="logo" id="logo" />
                 <NavLink className="item" to="">Home</NavLink>
                 <NavLink className="item" to="Servicos">Serviços</NavLink>
                 <NavLink className="item" to="Produtos">Produtos</NavLink>

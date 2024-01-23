@@ -3,7 +3,6 @@
     flex-wrap: wrap;
     background-color:var(--background);
     align-items: center;
-    width: 100vw;
     
 }
 .content-head{
@@ -16,22 +15,23 @@
     width: 1000px;
     background-color:var(--background);
     gap: 10px;
-
+    
 }
 
 .content-head .item{
     color: black;
     font-weight: 500;
-
+    
     padding: 10px 5px;
- 
+    
 }
 .content-head .item-Faca-orcamento{
     background-color: brown;
     padding: 10px 25px;
     border-radius: 5px;
     color: #fff;
- 
+    
+  
 }
 
 @media (max-width:740px) {
