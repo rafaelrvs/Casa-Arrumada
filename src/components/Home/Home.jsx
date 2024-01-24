@@ -29,9 +29,6 @@ const Home = () => {
 
             <div className="container-empresas-img">
                 <div className="container-img-main">
-
-
-
                 </div>
 
                 <div className="container-img">
@@ -43,16 +40,27 @@ const Home = () => {
                 <div className="container-img">
                     <img id="img-1" src="./public/aruan.png" alt="aruan" />
                 </div>
+                
+
 
 
             </div>
 
+            <footer className="footer-home">
+                
+               <div className="container-logo-footer" >
+                 <img id="img" src=".\public\logo.jpg" alt="Logo" />
+               </div>
+
+               <p>Parceria</p>
+               <p>Sujestões</p>
+               <div>
+                <p>Ligue:</p>
+                     <p>+55 11 99847-7201</p>
+               </div>
+            </footer>
 
 
-
-            <div>
-
-            </div>
 
 
 

@@ -2,24 +2,24 @@
 .content-home{
     display: flex;
     margin: 0 auto;
-    height: 500PX;
     width: 1000px;
+    height: 500px;
+
 }
 .container-p{
     display: flex;
     justify-content: center;
     background-image: url("./public/gestao-de-contratos-rtcount.jpg");
-    width: 100vw;
-    height: 600px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: center;
     flex-direction: column;
-   
     font-size: 2rem;
+    margin: 0 auto;
+    height: 500px;
+    width: 1000px;
     color: #fff;
     gap: 25px;
-
     text-shadow: 2px 2px 5px black;
 }
 .container-p .item-saiba-mais{
@@ -77,7 +77,7 @@
 @media (max-width:800px) {
     
 .container-empresas-confiança {
- 
+   
     font-size: 9pt;
 }
     
@@ -99,10 +99,30 @@
     }
     .container-img #img-2,#img-3 {
   
-    height: 100px;
+        height: 110px;
+        width: 100px;
 
     }
     .container-img #img-1{
-        height: 90px;
+        height: 100px;
+        width: 120px;
     }
 
+.container-empresas-confiança{
+    color: brown;
+
+}
+.footer-home{
+    display: flex;
+    height: 150px;
+    background-color: rgb(54, 49, 49);
+    justify-content: space-around;
+    color: #fff;
+    align-items: center;
+}
+
+.container-logo-footer{
+    display: flex;
+    align-self: center;
+    margin-left: 50px;
+}
