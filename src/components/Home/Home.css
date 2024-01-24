@@ -1,9 +1,7 @@
 
 .content-home{
     display: flex;
-    margin: 0 auto;
-    width: 1000px;
-    height: 500px;
+    height: 600px;
 
 }
 .container-p{
@@ -12,12 +10,11 @@
     background-image: url("./public/gestao-de-contratos-rtcount.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-y: center;
+    background-position-y: bottom;
     flex-direction: column;
     font-size: 2rem;
     margin: 0 auto;
-    height: 500px;
-    width: 1000px;
+    height: 450px;
     color: #fff;
     gap: 25px;
     text-shadow: 2px 2px 5px black;
@@ -53,6 +50,7 @@
 
 @media (max-width:400px) {
     .container-p{
+        
         background-position-x: center;
         height: 300px;
         font-size: 10pt;
@@ -85,32 +83,37 @@
 
 .container-empresas-img{
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 15px;
-    }
-    .container-img{
-        height: 150px;
-        overflow: hidden;
-        display: flex;
-        justify-content: center;
-       
-    }
+    justify-content: end;
+    margin: 0 auto;
+    width: 150px;
+    gap: 10px;
+    overflow: hidden;
+    
+    
+}
+.container-img{
+    height: 200px;
+    animation: carrocel 3000ms infinite linear;
+}
+
+      
+    
     .container-img #img-2,#img-3 {
-  
-        height: 110px;
-        width: 100px;
+        height:150px;
 
     }
     .container-img #img-1{
-        height: 100px;
-        width: 120px;
+        height: 150px;
+
+    
     }
 
 .container-empresas-confiança{
+    display: flex;
+   text-shadow: 0px 0px 1px black;
+    justify-content: start;
     color: brown;
-
+    
 }
 .footer-home{
     display: flex;
@@ -125,4 +128,20 @@
     display: flex;
     align-self: center;
     margin-left: 50px;
+}
+
+
+
+@keyframes carrocel {
+   0%{
+        transform: translateX(0);
+    }
+
+    50%{
+        transform: translateX(240%);
+    }
+    100%{
+        transform: translateX(0);
+
+}
 }
