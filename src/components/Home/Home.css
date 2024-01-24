@@ -14,7 +14,7 @@
     flex-direction: column;
     font-size: 2rem;
     margin: 0 auto;
-    height: 450px;
+    height: 400px;
     color: #fff;
     gap: 25px;
     text-shadow: 2px 2px 5px black;
@@ -83,65 +83,82 @@
 
 .container-empresas-img{
     display: flex;
-    justify-content: end;
+    justify-content: center;
+    align-items: center;
     margin: 0 auto;
-    width: 150px;
+    width: 200px;
     gap: 10px;
-    overflow: hidden;
-    
+    overflow-x: hidden ;
+
     
 }
 .container-img{
     height: 200px;
-    animation: carrocel 3000ms infinite linear;
+    display: flex;
+    animation: carrocelAnimado 20000ms infinite ease;
+
 }
 
-      
-    
-    .container-img #img-2,#img-3 {
-        height:150px;
 
-    }
-    .container-img #img-1{
-        height: 150px;
 
+.container-img #img-2,#img-3 {
+    height:150px;
     
-    }
+}
+.container-img #img-1{
+    height: 150px;
+    
+    
+}
 
 .container-empresas-confiança{
     display: flex;
-   text-shadow: 0px 0px 1px black;
+    text-shadow: 0px 0px 1px black;
     justify-content: start;
     color: brown;
     
 }
-.footer-home{
+.container-footer-home{
+display: flex;
+
+background-color: rgba(27, 26, 26, 0.767);
+height: 250px;
+}
+.container-footer{
+    margin: 0 auto;
+    width: 1000px;
+}
+.container-logo{
+    margin: 50px;
+}
+
+.container-content-footer{
     display: flex;
-    height: 150px;
-    background-color: rgb(54, 49, 49);
-    justify-content: space-around;
-    color: #fff;
+    justify-content: end;
     align-items: center;
-}
-
-.container-logo-footer{
-    display: flex;
-    align-self: center;
-    margin-left: 50px;
+    color: #fff;
+    padding: 50px;
 }
 
 
+@keyframes carrocelAnimado {
+0%{
+    transform:  translateX(0);
+}
 
-@keyframes carrocel {
-   0%{
-        transform: translateX(0);
-    }
-
-    50%{
-        transform: translateX(240%);
-    }
-    100%{
-        transform: translateX(0);
+30%{
+    transform:  translateX(-200px);
+    
+}
+50%{
+    transform:  translateX(-200px);
+    
 
 }
+
+100%{
+    transform:  translateX(-45px);
+    
+}
+
 }

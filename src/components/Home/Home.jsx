@@ -28,41 +28,55 @@ const Home = () => {
 
 
             <div className="container-empresas-img">
-           
+
+
+                <div className="container-img">
+                    <img id="img-2" src="./public/associação.png" alt="associação" />
+                </div>
 
                 <div className="container-img">
                     <img id="img-3" src="./public/download.png" alt="sancet" />
                 </div>
 
                 <div className="container-img">
-                    <img id="img-2" src="./public/associação.png" alt="associação" />
-                </div>
-                
-                <div className="container-img">
                     <img id="img-1" src="./public/aruan.png" alt="aruan" />
                 </div>
-                
+
 
 
 
             </div>
-        
-
-            <footer className="footer-home">
-                
-               <div className="container-logo-footer" >
-                 <img id="img" src=".\public\logo.jpg" alt="Logo" />
-               </div>
-
-               <p>Parceria</p>
-               <p>Sujestões</p>
-               <div>
-                <p>Ligue:</p>
-                     <p>+55 11 99847-7201</p>
-               </div>
-            </footer>
 
 
+
+            <div className="container-footer-home">
+                <div className="container-logo">
+                    <img src="./public/logo.jpg" alt="" />
+                </div>
+
+
+                <div className="container-footer">
+
+                    <div className="container-content-footer">
+                  
+
+                       
+                       
+                            <p>Contato: <br /><br /> 11 99847-7201</p>
+
+                 
+
+
+
+                    </div>
+
+            
+
+                </div>
+
+               
+
+            </div>
 
 
 
