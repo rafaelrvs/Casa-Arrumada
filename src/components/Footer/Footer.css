@@ -3,13 +3,17 @@
     padding: 120px;
     background-color: rgb(41, 5, 5);
     color: #fff;
+   
+    
+    
 }
 .footer-main .content{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: 0 auto;
     width: 1000px;
 
+    
 }
 #img-whats{
     padding: 10px;
@@ -33,20 +37,23 @@
     display: flex;
     flex-direction: column;
     align-items:center;
-  
     gap: 10px;
 }
 @media (max-width:1080px) {
     .footer-main .content{
        font-size: 12pt;
     }
+    .content .logo{
+        display: none;
+    }
 }
 @media (max-width:980px) {
     .footer-main .content{
         flex-wrap: wrap;
         gap: 30px;
+        justify-content: center;
        align-items: start;
-       
+
     }
     .textCompany , .servicos{
         padding: 14px;

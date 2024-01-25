@@ -14,6 +14,16 @@ const Header = () => {
                 <NavLink className="item" to="Servicos">Serviços</NavLink>
                 <NavLink className="item" to="Produtos">Produtos</NavLink>
                 <NavLink className="item-Faca-orcamento" to="Faça-um-orçamento">Faça um orçamento</NavLink>
+
+                <div className="container-hamburger">
+
+   
+                    <div id="barra1" ></div>
+                    <div id="barra2" ></div>
+                    <div id="barra3" ></div>
+
+
+                </div>
                     
                 </div>
             </div>

@@ -5,7 +5,7 @@ const Footer =()=>{
     return(
         <footer className="footer-main">
             <div className="content">
-                <div className="logo"><img src="./public/logo.jpg" alt="" /></div>
+                <div className="logo"><img src="./public/logo.jpg" alt="logo" /></div>
                 <div className="textCompany">
                     <h1>Compania</h1>
                     <p>Historia</p>

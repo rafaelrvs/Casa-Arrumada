@@ -46,3 +46,67 @@
  
     
 }
+
+@media(max-width:550px){
+    .item-Faca-orcamento , .item{
+       display: none;
+        
+    }
+
+    .container-hamburger{
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        padding: 5px;
+        border: 2px solid;
+        gap: 5px;
+    }
+    #barra1,#barra2,#barra3{
+        width:30px;
+        height: 2px;
+        background-color: black;
+        
+    }
+    .container-hamburger:after{
+        content: "";
+        position: absolute;
+        background-color: red;
+        margin: 0;
+        top: 0;
+        height: 5px;
+        width: 5px;
+    }
+    
+}
+
+.container-hamburger:hover:after{
+    animation: hamburgerMove 3000ms ease forwards ;
+    cursor: pointer;
+
+}
+
+
+
+
+
+
+
+
+@keyframes hamburgerMove {
+    0%{
+          transform: translateX(0);
+        }   
+    25%{
+            
+            transform: translateX(30px);
+        }
+    50%{
+        transform: translateY(30px);
+    }
+    75%{
+
+        transform: translateY(0px);
+    }
+      
+  
+}
