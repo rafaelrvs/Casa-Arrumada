@@ -1,8 +1,6 @@
 
 .content-home{
     display: flex;
-    height: 600px;
-
 }
 .container-p{
     display: flex;
@@ -14,7 +12,7 @@
     flex-direction: column;
     font-size: 2rem;
     margin: 0 auto;
-    height: 400px;
+    height: 600px;
     color: #fff;
     gap: 25px;
     text-shadow: 2px 2px 5px black;
@@ -95,7 +93,7 @@
 .container-img{
     height: 200px;
     display: flex;
-    animation: carrocelAnimado 20000ms infinite ease;
+    animation: carrocelAnimado 10000ms infinite ease;
 
 }
 
@@ -117,27 +115,6 @@
     justify-content: start;
     color: brown;
     
-}
-.container-footer-home{
-display: flex;
-
-background-color: rgba(27, 26, 26, 0.767);
-height: 250px;
-}
-.container-footer{
-    margin: 0 auto;
-    width: 1000px;
-}
-.container-logo{
-    margin: 50px;
-}
-
-.container-content-footer{
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    color: #fff;
-    padding: 50px;
 }
 
 

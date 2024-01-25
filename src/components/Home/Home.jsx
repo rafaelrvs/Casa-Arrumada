@@ -2,14 +2,15 @@
 
 import { NavLink } from "react-router-dom"
 import "./Home.css"
+import Head from "../head/head"
 const Home = () => {
 
 
 
     return (
         <div className="container-home">
-
-
+         
+        <Head title = "home"/>
             <div className="container-p">
 
                 <p id="text">Somos especialista  em manutenção predial e Residencial</p>
@@ -46,39 +47,7 @@ const Home = () => {
 
 
             </div>
-
-
-
-            <div className="container-footer-home">
-                <div className="container-logo">
-                    <img src="./public/logo.jpg" alt="" />
-                </div>
-
-
-                <div className="container-footer">
-
-                    <div className="container-content-footer">
-                  
-
-                       
-                       
-                            <p>Contato: <br /><br /> 11 99847-7201</p>
-
-                 
-
-
-
-                    </div>
-
-            
-
-                </div>
-
-               
-
-            </div>
-
-
+     
 
 
         </div>

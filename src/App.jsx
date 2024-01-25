@@ -6,6 +6,7 @@ import Contato from './components/Contato/Contato'
 import Pagina404 from './components/Pagina404/Pagina404'
 import Header from './components/Header/Header'
 import Servicos from './components/Servicos/Servicos'
+import Footer from './components/Footer/Footer'
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
   return (
     <>
     <BrowserRouter>
+   
       <Header/>
       <Routes>
         <Route path="" element={<Home/>}/>
@@ -22,6 +24,8 @@ function App() {
         <Route path="*" element={<Pagina404/>}/>
     
       </Routes>
+      
+      <Footer/>
 
     </BrowserRouter>
       
