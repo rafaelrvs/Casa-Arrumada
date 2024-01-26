@@ -1,0 +1,21 @@
+.containerImg-Servico{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 700px;
+    flex-wrap: wrap;
+
+}
+
+.containerImg-Servico img{
+    height: 350px;
+    width: 350px;
+    border-radius: 15px ;
+}
+
+.containerImg-Servico p{
+    font-size: 15pt;
+    font-weight: 800;
+    margin-top: 15px;
+
+}

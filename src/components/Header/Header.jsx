@@ -13,7 +13,7 @@ const Header = () => {
                 <NavLink className="item" to="">Home</NavLink>
                 <NavLink className="item" to="Servicos">Serviços</NavLink>
                 <NavLink className="item" to="Produtos">Produtos</NavLink>
-                <NavLink className="item-Faca-orcamento" to="Faça-um-orçamento">Faça um orçamento</NavLink>
+                <NavLink className="item-Faca-orcamento" to="Faca-um-orçamento">Faça um orçamento</NavLink>
 
                 <div className="container-hamburger">
 

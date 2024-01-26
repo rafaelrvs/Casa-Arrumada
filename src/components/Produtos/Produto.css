@@ -1,0 +1,33 @@
+
+.container-product{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 900px;
+    width: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+    gap:30px;
+    flex-wrap: wrap;
+
+}
+#img-produto{
+    height: 300px;
+}
+.content-product{
+    display: flex;
+    overflow-x: scroll;
+    align-items: start;
+    
+}
+
+@keyframes identifier {
+    from{
+        transform: translatey(0);
+
+    }
+    to{
+        transform: translateX(100%);
+    }
+}
