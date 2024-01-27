@@ -1,7 +1,7 @@
 
 .container-product{
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     text-align: center;
     height: 900px;
@@ -10,24 +10,85 @@
     overflow: hidden;
     gap:30px;
     flex-wrap: wrap;
+    position: relative;
 
 }
 #img-produto{
-    height: 300px;
+    height: 200px;
+    overflow-x: scroll;
+
 }
 .content-product{
     display: flex;
-    overflow-x: scroll;
-    align-items: start;
-    
+    padding: 25px;
+    animation: identifier 15000ms ease infinite;
+    transform: translate(200px);    
 }
 
 @keyframes identifier {
-    from{
-        transform: translatey(0);
+    0%{
+        transform: translateX(0);
 
     }
-    to{
-        transform: translateX(100%);
+    10%{
+        transform: translateX(-100px);
     }
+    15%{
+        transform: translateX(-100px);
+    }
+    20%{
+        transform: translateX(-300px);
+    }
+    25%{
+        transform: translateX(-300px);
+    }
+    30%{
+        transform: translateX(-500px);
+    }
+    35%{
+        transform: translateX(-500px);
+    }
+    50%{
+        transform: translateX(-700px);
+    }
+    55%{
+        transform: translateX(-700px);
+    }
+    60%{
+        transform: translateX(-800px);
+    }
+    65%{
+        transform: translateX(-800px);
+    }
+    70%{
+        transform: translateX(-1000px);
+    }
+    75%{
+        transform: translateX(-1200px);
+    }
+    80%{
+        transform: translateX(-1400px);
+    }
+    85%{
+        transform: translateX(-1400px);
+    }
+    90%{
+        transform: translateX(-1500px);
+    }
+    95%{
+        transform: translateX(-1500px);
+    }
+
+    100%{
+        transform: translateX(-1800px);
+    }
+}
+
+
+.button-compreAqui{
+    background-color: blue;
+    padding: 5px;
+    color: #fff;
+
+    border-radius: 5px;
 }

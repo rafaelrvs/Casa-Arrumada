@@ -26,16 +26,12 @@
     border-radius: 5px;
     background-color: brown;
     margin-left: 50px;
-    transform: translateX(-20px);
-    opacity: 0;
-    animation: interativeAnimationHome .3s  forwards;
 }
 
 .container-p #text{
     margin-left: 50px;
     transform: translateX(-20px);
-    opacity: 0;
-    animation: interativeAnimationHome .3s  forwards;
+
 }
 
 @media (max-width:1000px) {
@@ -78,9 +74,7 @@
     align-items: center;
     padding: 20px;
     font-size: 15pt;
-    transform: translateX(-20px);
-    opacity: 0;
-    animation: interativeAnimationHome .3s  forwards;
+
 }
 @media (max-width:800px) {
     
@@ -152,13 +146,3 @@
 
 }
 
-
-
-
-@keyframes interativeAnimationHome {
-    
-    to{
-        transform: initial;
-        opacity: 1;
-    }
-}

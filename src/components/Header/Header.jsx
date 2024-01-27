@@ -16,13 +16,9 @@ const Header = () => {
                 <NavLink className="item-Faca-orcamento" to="Faca-um-orçamento">Faça um orçamento</NavLink>
 
                 <div className="container-hamburger">
-
-   
                     <div id="barra1" ></div>
                     <div id="barra2" ></div>
                     <div id="barra3" ></div>
-
-
                 </div>
                     
                 </div>
